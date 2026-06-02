@@ -1,0 +1,421 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@gmail.com",
+      "phone": "9999999999",
+      "company": "SkyCorp Travel",
+      "department": "Administration",
+      "designation": "System Administrator",
+      "employeeId": "ADM001",
+      "role": "Admin",
+      "password": "admin123",
+      "profileImage": ""
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap163@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Employee",
+      "password": "123",
+      "id": "LGiDUBlQN04"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap16@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Employee",
+      "password": "123456",
+      "id": "YrrHVwFjjOo"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap16@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Employee",
+      "password": "asdf",
+      "id": "3L06Q7FWZqY"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap16@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Admin",
+      "password": "asd",
+      "id": "aicWQN5RqQM"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap16@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Employee",
+      "password": "123",
+      "id": "Ck-uGypkt-U"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap16@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Admin",
+      "password": "123",
+      "id": "8mvvAXGspPE"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap16@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Admin",
+      "password": "123",
+      "id": "iDow1b0VRQs"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap16@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Admin",
+      "password": "123",
+      "id": "jmBq-x2t4Gw"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap16@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Manager",
+      "password": "123",
+      "id": "o08-cRvHeos"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap1@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Employee",
+      "password": "123",
+      "id": "biAVB8K66GE"
+    },
+    {
+      "name": "dfg",
+      "email": "stejpratap@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Manager",
+      "password": "123",
+      "id": "SWNH0YoILTE"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "tejpratap163@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Employee",
+      "password": "123",
+      "id": "D5xfjbvi23U"
+    },
+    {
+      "name": "dfg",
+      "email": "stejprata163@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Admin",
+      "password": "123",
+      "id": "Q2IcUGYpd-g"
+    },
+    {
+      "name": "dfg",
+      "email": "stejprata@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Employee",
+      "password": "123",
+      "id": "Jzh5BOv_il4"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stej@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Admin",
+      "password": "123",
+      "id": "XsZ3NBWXE8k"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "tej@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Employee",
+      "password": "123",
+      "id": "N5qC7No_nho"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "tej1@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Admin",
+      "password": "123",
+      "id": "me1wSn7FhAQ"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "te@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Manager",
+      "password": "123",
+      "id": "Unntdr-XAo0"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "t@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Employee",
+      "password": "123",
+      "id": "JthH2LZgFBQ"
+    }
+  ],
+  "employees": [
+    {
+      "id": "EMP001",
+      "name": "John Smith",
+      "email": "john@skycorp.com",
+      "department": "Finance",
+      "company": "SkyCorp Travel"
+    },
+    {
+      "id": "EMP002",
+      "name": "Emma Watson",
+      "email": "emma@skycorp.com",
+      "department": "Human Resources",
+      "company": "Luffy"
+    },
+    {
+      "name": "Luffy",
+      "email": "stejpratap16@gmail.com",
+      "department": "HR",
+      "id": "9g_VaqcGQMo"
+    },
+    {
+      "name": "Tej",
+      "email": "stejpratap16@gmail.com",
+      "department": "HR",
+      "id": "JsVLSaEbstk"
+    }
+  ],
+  "trips": [
+    {
+      "id": "TRIP001",
+      "employee": "John Smith",
+      "destination": "London",
+      "purpose": "Client Meeting",
+      "budget": 5000,
+      "departureDate": "2026-06-10",
+      "returnDate": "2026-06-15",
+      "status": "Approved"
+    },
+    {
+      "id": "TRIP002",
+      "employee": "Emma Watson",
+      "destination": "Singapore",
+      "purpose": "Business Conference",
+      "budget": 3500,
+      "departureDate": "2026-07-01",
+      "returnDate": "2026-07-05",
+      "status": "Approved"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "1",
+      "message": "Welcome to SkyCorp Travel",
+      "date": "2026-05-30"
+    },
+    {
+      "id": "2",
+      "message": "Trip Request Submitted",
+      "date": "2026-05-31"
+    },
+    {
+      "message": "Emma Watson's trip to Singapore was approved",
+      "date": "2/6/2026",
+      "id": "020PdSfN18A"
+    }
+  ],
+  "reports": [
+    {
+      "id": "1",
+      "title": "Monthly Travel Report",
+      "month": "May 2026",
+      "totalTrips": 25,
+      "totalExpense": 45000
+    }
+  ],
+  "settings": [
+    {
+      "id": "1",
+      "companyName": "SkyCorp Travel",
+      "theme": "light",
+      "notifications": true
+    }
+  ],
+  "departments": [
+    {
+      "id": "DEP001",
+      "name": "Human Resources",
+      "head": "Emma Watson",
+      "employees": 15
+    },
+    {
+      "id": "DEP002",
+      "name": "Finance",
+      "head": "John Smith",
+      "employees": 10
+    },
+    {
+      "id": "DEP003",
+      "name": "Information Technology",
+      "head": "Robert Lee",
+      "employees": 20
+    }
+  ],
+  "companies": [
+    {
+      "id": "COMP001",
+      "name": "SkyCorp Travel",
+      "location": "New York",
+      "employees": 150
+    },
+    {
+      "id": "COMP002",
+      "name": "Luffy Technologies",
+      "location": "London",
+      "employees": 75
+    }
+  ],
+  "bookings": [
+    {
+      "id": "BOOK001",
+      "employee": "John Smith",
+      "airline": "Emirates",
+      "destination": "London",
+      "status": "Confirmed"
+    },
+    {
+      "id": "BOOK002",
+      "employee": "Emma Watson",
+      "airline": "Singapore Airlines",
+      "destination": "Singapore",
+      "status": "Pending"
+    }
+  ],
+  "calendar": [
+    {
+      "id": "CAL001",
+      "employee": "John Smith",
+      "destination": "London",
+      "date": "2026-06-10"
+    },
+    {
+      "id": "CAL002",
+      "employee": "Emma Watson",
+      "destination": "Singapore",
+      "date": "2026-07-01"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "EXP001",
+      "employee": "Emma Watson",
+      "amount": 2500,
+      "status": "Pending"
+    },
+    {
+      "id": "EXP002",
+      "employee": "John Smith",
+      "amount": 5000,
+      "status": "Approved"
+    }
+  ],
+  "analytics": [
+    {
+      "month": "Jan",
+      "trips": 12,
+      "expenses": 15000,
+      "id": "FlvMEPhksXo"
+    },
+    {
+      "month": "Feb",
+      "trips": 18,
+      "expenses": 22000,
+      "id": "qJ18CC0jy6w"
+    },
+    {
+      "month": "Mar",
+      "trips": 25,
+      "expenses": 28000,
+      "id": "m8Nmqt0RNU0"
+    },
+    {
+      "month": "Apr",
+      "trips": 20,
+      "expenses": 24000,
+      "id": "xy6nbBBkXOc"
+    },
+    {
+      "month": "May",
+      "trips": 30,
+      "expenses": 35000,
+      "id": "rxhcEpmYlJ0"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
