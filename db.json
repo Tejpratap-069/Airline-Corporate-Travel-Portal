@@ -221,6 +221,17 @@
       "role": "Employee",
       "password": "123",
       "id": "JthH2LZgFBQ"
+    },
+    {
+      "name": "sdf",
+      "email": "sdf213@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Admin",
+      "password": "123456",
+      "id": "3ZP_hi3F9hU"
     }
   ],
   "employees": [
