@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   FaUsers,
   FaPlane,
@@ -15,28 +16,70 @@ const HomeDashboard = () => {
   const [companies, setCompanies] = useState([]);
   const [expenses, setExpenses] = useState([]);
   const [notifications, setNotifications] = useState([]);
+  const user = JSON.parse(
+  localStorage.getItem("user")
+);
+const navigate = useNavigate();
 
   useEffect(() => {
     loadData();
   }, []);
 
   const loadData = async () => {
-    try {
-      const empRes = await api.get("/employees");
-      const tripRes = await api.get("/trips");
-      const companyRes = await api.get("/companies");
-      const expenseRes = await api.get("/expenses");
-      const notificationRes = await api.get("/notifications");
+  try {
+    const empRes = await api.get("/employees");
+    const tripRes = await api.get("/trips");
+    const companyRes = await api.get("/companies");
+    const expenseRes = await api.get("/expenses");
+    const notificationRes = await api.get("/notifications");
 
+    if (user?.role === "Admin") {
       setEmployees(empRes.data);
       setTrips(tripRes.data);
       setCompanies(companyRes.data);
       setExpenses(expenseRes.data);
       setNotifications(notificationRes.data);
-    } catch (error) {
-      console.log(error);
+      return;
     }
-  };
+
+    setEmployees(
+      empRes.data.filter(
+        (emp) =>
+          emp.company?.toLowerCase() ===
+          user?.company?.toLowerCase()
+      )
+    );
+
+    setTrips(
+      tripRes.data.filter(
+        (trip) =>
+          trip.company?.toLowerCase() ===
+          user?.company?.toLowerCase()
+      )
+    );
+
+    setCompanies(
+      companyRes.data.filter(
+        (company) =>
+          company.name?.toLowerCase() ===
+          user?.company?.toLowerCase()
+      )
+    );
+
+    setExpenses(
+      expenseRes.data.filter(
+        (expense) =>
+          expense.company?.toLowerCase() ===
+          user?.company?.toLowerCase()
+      )
+    );
+
+    setNotifications(notificationRes.data);
+
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   const totalExpense = expenses.reduce(
     (sum, expense) =>
@@ -51,13 +94,17 @@ const HomeDashboard = () => {
 
       <div className="bg-gradient-to-r from-black to-cyan-700 text-white p-10 rounded-3xl shadow">
 
-        <h1 className="text-5xl font-bold">
-          Welcome to SkyCorp Travel
-        </h1>
+       <h1 className="text-5xl font-bold">
+  Welcome Back, {user?.name}
+</h1>
 
-        <p className="mt-4 text-xl">
-          Corporate Travel Management Platform
-        </p>
+<p className="mt-4 text-xl">
+  Company: {user?.company}
+</p>
+
+<p className="text-lg">
+  Role: {user?.role}
+</p>
 
       </div>
 
@@ -145,21 +192,33 @@ const HomeDashboard = () => {
 
         <div className="grid md:grid-cols-4 gap-5">
 
-          <button className="bg-blue-600 text-white p-4 rounded-xl">
-            New Trip Request
-          </button>
+        <button
+  onClick={() => navigate("/trips")}
+  className="bg-blue-600 text-white p-4 rounded-xl hover:bg-blue-700"
+>
+  New Trip Request
+</button>
 
-          <button className="bg-green-600 text-white p-4 rounded-xl">
-            Add Employee
-          </button>
+<button
+  onClick={() => navigate("/employees")}
+  className="bg-green-600 text-white p-4 rounded-xl hover:bg-green-700"
+>
+  Add Employee
+</button>
 
-          <button className="bg-purple-600 text-white p-4 rounded-xl">
-            Create Booking
-          </button>
+<button
+  onClick={() => navigate("/bookings")}
+  className="bg-purple-600 text-white p-4 rounded-xl hover:bg-purple-700"
+>
+  Create Booking
+</button>
 
-          <button className="bg-orange-600 text-white p-4 rounded-xl">
-            Submit Expense
-          </button>
+<button
+  onClick={() => navigate("/expenses")}
+  className="bg-orange-600 text-white p-4 rounded-xl hover:bg-orange-700"
+>
+  Submit Expense
+</button>
 
         </div>
 
@@ -341,7 +400,7 @@ const HomeDashboard = () => {
           </h2>
 
           <h1 className="text-5xl font-bold mt-2">
-            ₹50K
+            ₹{totalExpense}
           </h1>
 
         </div>

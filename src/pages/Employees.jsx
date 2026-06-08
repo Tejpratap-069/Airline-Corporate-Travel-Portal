@@ -4,6 +4,9 @@ import toast from "react-hot-toast";
 
 const Employees = () => {
   const [employees, setEmployees] = useState([]);
+  const user = JSON.parse(
+  localStorage.getItem("user")
+);
   const [search, setSearch] = useState("");
 
   const [form, setForm] = useState({
@@ -17,9 +20,17 @@ const Employees = () => {
   }, []);
 
   const fetchEmployees = async () => {
-    const res = await api.get("/employees");
-    setEmployees(res.data);
-  };
+  const res = await api.get("/employees");
+
+  const companyEmployees =
+    res.data.filter(
+      (emp) =>
+        emp.company?.toLowerCase() ===
+        user?.company?.toLowerCase()
+    );
+
+  setEmployees(companyEmployees);
+};
 
   const addEmployee = async () => {
     if (
@@ -31,7 +42,10 @@ const Employees = () => {
       return;
     }
 
-    await api.post("/employees", form);
+    await api.post("/employees", {
+  ...form,
+  company: user.company,
+});
 
     toast.success("Employee Added");
 

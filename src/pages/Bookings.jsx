@@ -4,6 +4,9 @@ import toast from "react-hot-toast";
 
 const Bookings = () => {
   const [bookings, setBookings] = useState([]);
+  const user = JSON.parse(
+  localStorage.getItem("user")
+);
 
   const [form, setForm] = useState({
     employee: "",
@@ -17,13 +20,27 @@ const Bookings = () => {
   }, []);
 
   const loadBookings = async () => {
-    try {
-      const res = await api.get("/bookings");
+  try {
+    const res = await api.get("/bookings");
+
+    if (user?.role === "Admin") {
       setBookings(res.data);
-    } catch (error) {
-      console.log(error);
+      return;
     }
-  };
+
+    const companyBookings =
+      res.data.filter(
+        (booking) =>
+          booking.company?.toLowerCase() ===
+          user?.company?.toLowerCase()
+      );
+
+    setBookings(companyBookings);
+
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   const addBooking = async () => {
     if (
@@ -37,9 +54,10 @@ const Bookings = () => {
 
     try {
       await api.post("/bookings", {
-        id: Date.now().toString(),
-        ...form,
-      });
+  id: Date.now().toString(),
+  ...form,
+  company: user.company,
+});
 
       toast.success("Booking Added");
 

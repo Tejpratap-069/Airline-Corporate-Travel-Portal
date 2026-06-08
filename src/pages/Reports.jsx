@@ -7,27 +7,51 @@ const Reports = () => {
 
   const [trips, setTrips] =
     useState([]);
+    const user = JSON.parse(
+  localStorage.getItem("user")
+);
 
   useEffect(() => {
     loadData();
   }, []);
 
   const loadData = async () => {
-    try {
-      const empRes = await api.get(
-        "/employees"
-      );
+  try {
+    const empRes = await api.get(
+      "/employees"
+    );
 
-      const tripRes = await api.get(
-        "/trips"
-      );
+    const tripRes = await api.get(
+      "/trips"
+    );
 
+    if (user?.role === "Admin") {
       setEmployees(empRes.data);
       setTrips(tripRes.data);
-    } catch (error) {
-      console.log(error);
+      return;
     }
-  };
+
+    const companyEmployees =
+      empRes.data.filter(
+        (employee) =>
+          employee.company?.toLowerCase() ===
+          user?.company?.toLowerCase()
+      );
+
+    const companyTrips =
+      tripRes.data.filter(
+        (trip) =>
+          trip.company?.toLowerCase() ===
+          user?.company?.toLowerCase()
+      );
+
+    setEmployees(companyEmployees);
+    setTrips(companyTrips);
+
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   const approvedTrips =
     trips.filter(

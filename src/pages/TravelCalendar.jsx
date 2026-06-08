@@ -4,6 +4,9 @@ import toast from "react-hot-toast";
 
 const TravelCalendar = () => {
   const [trips, setTrips] = useState([]);
+  const user = JSON.parse(
+  localStorage.getItem("user")
+);
 
   const [form, setForm] = useState({
     employee: "",
@@ -16,13 +19,27 @@ const TravelCalendar = () => {
   }, []);
 
   const loadTrips = async () => {
-    try {
-      const res = await api.get("/calendar");
+  try {
+    const res = await api.get("/calendar");
+
+    if (user?.role === "Admin") {
       setTrips(res.data);
-    } catch (error) {
-      console.log(error);
+      return;
     }
-  };
+
+    const companyTrips =
+      res.data.filter(
+        (trip) =>
+          trip.company?.toLowerCase() ===
+          user?.company?.toLowerCase()
+      );
+
+    setTrips(companyTrips);
+
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   const addTrip = async () => {
     if (
@@ -36,9 +53,10 @@ const TravelCalendar = () => {
 
     try {
       await api.post("/calendar", {
-        id: Date.now().toString(),
-        ...form,
-      });
+  id: Date.now().toString(),
+  ...form,
+  company: user.company,
+});
 
       toast.success(
         "Trip Added To Calendar"

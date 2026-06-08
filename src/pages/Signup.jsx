@@ -22,6 +22,8 @@ const Signup = () => {
     e.preventDefault();
 
     try {
+      // CHECK EXISTING USERS
+
       const existingUsers = await api.get("/users");
 
       const emailExists = existingUsers.data.some(
@@ -35,6 +37,34 @@ const Signup = () => {
         return;
       }
 
+      // CHECK IF COMPANY EXISTS
+
+      const companiesRes = await api.get("/companies");
+
+      const companyExists =
+        companiesRes.data.some(
+          (company) =>
+            company.name
+              ?.toLowerCase()
+              .trim() ===
+            form.company
+              .toLowerCase()
+              .trim()
+        );
+
+      // CREATE COMPANY IF NOT EXISTS
+
+      if (!companyExists) {
+        await api.post("/companies", {
+          id: Date.now().toString(),
+          name: form.company,
+          location: "Not Set",
+          employees: 0,
+        });
+      }
+
+      // CREATE USER
+
       await api.post("/users", form);
 
       toast.success(
@@ -42,6 +72,7 @@ const Signup = () => {
       );
 
       navigate("/login");
+
     } catch (error) {
       console.log(error);
       toast.error("Signup Failed");
@@ -183,10 +214,6 @@ const Signup = () => {
 
               <option value="Manager">
                 Manager
-              </option>
-
-              <option value="Admin">
-                Admin
               </option>
 
             </select>

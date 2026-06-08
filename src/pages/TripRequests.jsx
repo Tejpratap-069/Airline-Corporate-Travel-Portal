@@ -4,6 +4,9 @@ import toast from "react-hot-toast";
 
 const TripRequests = () => {
   const [trips, setTrips] = useState([]);
+  const user = JSON.parse(
+  localStorage.getItem("user")
+);
 
   const [form, setForm] = useState({
     employee: "",
@@ -20,13 +23,27 @@ const TripRequests = () => {
   }, []);
 
   const fetchTrips = async () => {
-    try {
-      const res = await api.get("/trips");
+  try {
+    const res = await api.get("/trips");
+
+    if (user?.role === "Admin") {
       setTrips(res.data);
-    } catch (error) {
-      console.log(error);
+      return;
     }
-  };
+
+    const companyTrips =
+      res.data.filter(
+        (trip) =>
+          trip.company?.toLowerCase() ===
+          user?.company?.toLowerCase()
+      );
+
+    setTrips(companyTrips);
+
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   const addTrip = async () => {
     if (
@@ -42,7 +59,10 @@ const TripRequests = () => {
     }
 
     try {
-      await api.post("/trips", form);
+      await api.post("/trips", {
+  ...form,
+  company: user.company,
+});
 
       toast.success("Trip Request Created");
 

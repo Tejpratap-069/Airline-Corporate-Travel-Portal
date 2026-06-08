@@ -45,19 +45,22 @@ const Sidebar = () => {
   ];
 
   const managerMenu = [
-    { name: "Home", path: "/home", icon: <FaHome /> },
-    { name: "Dashboard", path: "/dashboard", icon: <FaTachometerAlt /> },
-    { name: "Employees", path: "/employees", icon: <FaUsers /> },
-    { name: "Companies", path: "/companies", icon: <FaBriefcase /> },
-    { name: "Trip Requests", path: "/trips", icon: <FaPlane /> },
-    { name: "Bookings", path: "/bookings", icon: <FaTicketAlt /> },
-    { name: "Travel Calendar", path: "/calendar", icon: <FaCalendarAlt /> },
-    { name: "Approvals", path: "/approvals", icon: <FaCheckCircle /> },
-    { name: "Reports", path: "/reports", icon: <FaChartBar /> },
-    { name: "Notifications", path: "/notifications", icon: <FaBell /> },
-    { name: "Profile", path: "/profile", icon: <FaUser /> },
-    { name: "Settings", path: "/settings", icon: <FaCog /> },
-  ];
+  { name: "Home", path: "/home", icon: <FaHome /> },
+  { name: "Dashboard", path: "/dashboard", icon: <FaTachometerAlt /> },
+  { name: "Employees", path: "/employees", icon: <FaUsers /> },
+  { name: "Companies", path: "/companies", icon: <FaBriefcase /> },
+  { name: "Trip Requests", path: "/trips", icon: <FaPlane /> },
+  { name: "Bookings", path: "/bookings", icon: <FaTicketAlt /> },
+  { name: "Travel Calendar", path: "/calendar", icon: <FaCalendarAlt /> },
+  { name: "Approvals", path: "/approvals", icon: <FaCheckCircle /> },
+
+  { name: "Expense Claims", path: "/expenses", icon: <FaMoneyBill /> },
+
+  { name: "Reports", path: "/reports", icon: <FaChartBar /> },
+  { name: "Notifications", path: "/notifications", icon: <FaBell /> },
+  { name: "Profile", path: "/profile", icon: <FaUser /> },
+  { name: "Settings", path: "/settings", icon: <FaCog /> },
+];
 
   const employeeMenu = [
     { name: "Home", path: "/home", icon: <FaHome /> },

@@ -4,24 +4,42 @@ import api from "../api/api";
 const Notifications = () => {
   const [notifications, setNotifications] =
     useState([]);
+    const user = JSON.parse(
+  localStorage.getItem("user")
+);
 
   useEffect(() => {
     fetchNotifications();
   }, []);
 
-  const fetchNotifications = async () => {
-    try {
-      const res = await api.get(
-        "/notifications"
+   const fetchNotifications = async () => {
+  try {
+    const res = await api.get(
+      "/notifications"
+    );
+
+    if (user?.role === "Admin") {
+      setNotifications(
+        [...res.data].reverse()
+      );
+      return;
+    }
+
+    const companyNotifications =
+      res.data.filter(
+        (notification) =>
+          notification.company?.toLowerCase() ===
+          user?.company?.toLowerCase()
       );
 
-      setNotifications(
-        res.data.reverse()
-      );
-    } catch (error) {
-      console.log(error);
-    }
-  };
+    setNotifications(
+      companyNotifications.reverse()
+    );
+
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   return (
     <div className="space-y-8">

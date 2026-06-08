@@ -4,6 +4,9 @@ import toast from "react-hot-toast";
 
 const ExpenseClaims = () => {
   const [expenses, setExpenses] = useState([]);
+  const user = JSON.parse(
+  localStorage.getItem("user")
+);
 
   const [form, setForm] = useState({
     employee: "",
@@ -16,13 +19,27 @@ const ExpenseClaims = () => {
   }, []);
 
   const loadExpenses = async () => {
-    try {
-      const res = await api.get("/expenses");
+  try {
+    const res = await api.get("/expenses");
+
+    if (user?.role === "Admin") {
       setExpenses(res.data);
-    } catch (error) {
-      console.log(error);
+      return;
     }
-  };
+
+    const companyExpenses =
+      res.data.filter(
+        (expense) =>
+          expense.company?.toLowerCase() ===
+          user?.company?.toLowerCase()
+      );
+
+    setExpenses(companyExpenses);
+
+  } catch (error) {
+    console.log(error);
+  }
+};  
 
   const addExpense = async () => {
     if (!form.employee || !form.amount) {
@@ -32,9 +49,10 @@ const ExpenseClaims = () => {
 
     try {
       await api.post("/expenses", {
-        id: Date.now().toString(),
-        ...form,
-      });
+  id: Date.now().toString(),
+  ...form,
+  company: user.company,
+});
 
       toast.success("Expense Added");
 

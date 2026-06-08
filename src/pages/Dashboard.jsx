@@ -21,17 +21,36 @@ const Dashboard = () => {
     localStorage.getItem("user")
   );
 
-  useEffect(() => {
+useEffect(() => {
+  if (user?.company) {
     loadData();
-  }, []);
+  }
+}, []);
 
-  const loadData = async () => {
+const loadData = async () => {
+  try {
     const empRes = await api.get("/employees");
     const tripRes = await api.get("/trips");
 
-    setEmployees(empRes.data);
-    setTrips(tripRes.data);
-  };
+    const companyEmployees = empRes.data.filter(
+      (emp) =>
+        emp.company?.toLowerCase() ===
+        user?.company?.toLowerCase()
+    );
+
+    const companyTrips = tripRes.data.filter(
+      (trip) =>
+        trip.company?.toLowerCase() ===
+        user?.company?.toLowerCase()
+    );
+
+    setEmployees(companyEmployees);
+    setTrips(companyTrips);
+
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   const approvedTrips = trips.filter(
     (t) => t.status === "Approved"

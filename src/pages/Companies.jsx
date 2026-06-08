@@ -4,6 +4,9 @@ import toast from "react-hot-toast";
 
 const Companies = () => {
   const [companies, setCompanies] = useState([]);
+  const user = JSON.parse(
+  localStorage.getItem("user")
+);
 
   const [form, setForm] = useState({
     name: "",
@@ -16,13 +19,27 @@ const Companies = () => {
   }, []);
 
   const loadCompanies = async () => {
-    try {
-      const res = await api.get("/companies");
+  try {
+    const res = await api.get("/companies");
+
+    if (user?.role === "Admin") {
       setCompanies(res.data);
-    } catch (error) {
-      console.log(error);
+      return;
     }
-  };
+
+    const companyData =
+      res.data.filter(
+        (company) =>
+          company.name?.toLowerCase() ===
+          user?.company?.toLowerCase()
+      );
+
+    setCompanies(companyData);
+
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   const addCompany = async () => {
     if (!form.name || !form.location) {
@@ -134,63 +151,6 @@ const Companies = () => {
 
       </div>
 
-      {/* Add Company */}
-
-      <div className="bg-white p-8 rounded-3xl shadow">
-
-        <h2 className="text-2xl font-bold mb-5">
-          Add Company
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-4">
-
-          <input
-            placeholder="Company Name"
-            className="border p-3 rounded-xl"
-            value={form.name}
-            onChange={(e) =>
-              setForm({
-                ...form,
-                name: e.target.value,
-              })
-            }
-          />
-
-          <input
-            placeholder="Location"
-            className="border p-3 rounded-xl"
-            value={form.location}
-            onChange={(e) =>
-              setForm({
-                ...form,
-                location: e.target.value,
-              })
-            }
-          />
-
-          <input
-            placeholder="Employees Count"
-            className="border p-3 rounded-xl"
-            value={form.employees}
-            onChange={(e) =>
-              setForm({
-                ...form,
-                employees:
-                  e.target.value,
-              })
-            }
-          />
-
-        </div>
-
-        <button
-          onClick={addCompany}
-          className="mt-5 bg-green-600 text-white px-8 py-3 rounded-xl"
-        >
-          Add Company
-        </button>
-
-      </div>
 
       {/* Companies Table */}
 

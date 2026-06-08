@@ -1,18 +1,18 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Admin User",
-      "email": "admin@gmail.com",
-      "phone": "9999999999",
-      "company": "SkyCorp Travel",
-      "department": "Administration",
-      "designation": "System Administrator",
-      "employeeId": "ADM001",
-      "role": "Admin",
-      "password": "admin123",
-      "profileImage": ""
-    },
+  "id": "ADMIN001",
+  "name": "Tej Pratap Singh",
+  "email": "tejpratap@skycorp.com",
+  "phone": "9999999999",
+  "company": "SkyCorp",
+  "department": "Administration",
+  "designation": "System Administrator",
+  "employeeId": "ADM001",
+  "role": "Admin",
+  "password": "admin123",
+  "profileImage": ""
+},
     {
       "name": "Tej pratap Singh",
       "email": "stejpratap163@gmail.com",
@@ -53,53 +53,9 @@
       "company": "Luffy",
       "department": "HR",
       "designation": "uo",
-      "role": "Admin",
-      "password": "asd",
-      "id": "aicWQN5RqQM"
-    },
-    {
-      "name": "Tej pratap Singh",
-      "email": "stejpratap16@gmail.com",
-      "phone": "06302064641",
-      "company": "Luffy",
-      "department": "HR",
-      "designation": "uo",
       "role": "Employee",
       "password": "123",
       "id": "Ck-uGypkt-U"
-    },
-    {
-      "name": "Tej pratap Singh",
-      "email": "stejpratap16@gmail.com",
-      "phone": "06302064641",
-      "company": "Luffy",
-      "department": "HR",
-      "designation": "uo",
-      "role": "Admin",
-      "password": "123",
-      "id": "8mvvAXGspPE"
-    },
-    {
-      "name": "Tej pratap Singh",
-      "email": "stejpratap16@gmail.com",
-      "phone": "06302064641",
-      "company": "Luffy",
-      "department": "HR",
-      "designation": "uo",
-      "role": "Admin",
-      "password": "123",
-      "id": "iDow1b0VRQs"
-    },
-    {
-      "name": "Tej pratap Singh",
-      "email": "stejpratap16@gmail.com",
-      "phone": "06302064641",
-      "company": "Luffy",
-      "department": "HR",
-      "designation": "uo",
-      "role": "Admin",
-      "password": "123",
-      "id": "jmBq-x2t4Gw"
     },
     {
       "name": "Tej pratap Singh",
@@ -147,17 +103,6 @@
     },
     {
       "name": "dfg",
-      "email": "stejprata163@gmail.com",
-      "phone": "06302064641",
-      "company": "Luffy",
-      "department": "HR",
-      "designation": "uo",
-      "role": "Admin",
-      "password": "123",
-      "id": "Q2IcUGYpd-g"
-    },
-    {
-      "name": "dfg",
       "email": "stejprata@gmail.com",
       "phone": "06302064641",
       "company": "Luffy",
@@ -169,17 +114,6 @@
     },
     {
       "name": "Tej pratap Singh",
-      "email": "stej@gmail.com",
-      "phone": "06302064641",
-      "company": "Luffy",
-      "department": "HR",
-      "designation": "uo",
-      "role": "Admin",
-      "password": "123",
-      "id": "XsZ3NBWXE8k"
-    },
-    {
-      "name": "Tej pratap Singh",
       "email": "tej@gmail.com",
       "phone": "06302064641",
       "company": "Luffy",
@@ -188,17 +122,6 @@
       "role": "Employee",
       "password": "123",
       "id": "N5qC7No_nho"
-    },
-    {
-      "name": "Tej pratap Singh",
-      "email": "tej1@gmail.com",
-      "phone": "06302064641",
-      "company": "Luffy",
-      "department": "HR",
-      "designation": "uo",
-      "role": "Admin",
-      "password": "123",
-      "id": "me1wSn7FhAQ"
     },
     {
       "name": "Tej pratap Singh",
@@ -223,15 +146,37 @@
       "id": "JthH2LZgFBQ"
     },
     {
-      "name": "sdf",
-      "email": "sdf213@gmail.com",
-      "phone": "06302064641",
-      "company": "Luffy",
-      "department": "HR",
-      "designation": "uo",
-      "role": "Admin",
-      "password": "123456",
-      "id": "3ZP_hi3F9hU"
+      "name": "R PRANAV",
+      "email": "PRANAV@gmail.com",
+      "phone": "7416173333",
+      "company": "SK",
+      "department": "IT",
+      "designation": "CEO",
+      "role": "Manager",
+      "password": "1234",
+      "id": "NHWPCk6ONhY"
+    },
+    {
+      "name": "Luffy Monkey D",
+      "email": "luffymonkeyd15762@gmail.com",
+      "phone": "7474747474",
+      "company": "Google",
+      "department": "IT",
+      "designation": "IT manager",
+      "role": "Manager",
+      "password": "123",
+      "id": "GwxK3hdW03w"
+    },
+    {
+      "name": "Luffy ",
+      "email": "luffymonkeyd@gmail.com",
+      "phone": "141414141",
+      "company": "SK",
+      "department": "Marketing",
+      "designation": "Manager",
+      "role": "Manager",
+      "password": "123",
+      "id": "w3OKy4d7D1Y"
     }
   ],
   "employees": [
@@ -260,6 +205,13 @@
       "email": "stejpratap16@gmail.com",
       "department": "HR",
       "id": "JsVLSaEbstk"
+    },
+    {
+      "name": "Tej",
+      "email": "tej@gmail.com",
+      "department": "HR",
+      "company": "Google",
+      "id": "nqkoWyyJKgQ"
     }
   ],
   "trips": [
@@ -271,7 +223,8 @@
       "budget": 5000,
       "departureDate": "2026-06-10",
       "returnDate": "2026-06-15",
-      "status": "Approved"
+      "status": "Approved",
+      "company": "SkyCorp Travel"
     },
     {
       "id": "TRIP002",
@@ -281,7 +234,30 @@
       "budget": 3500,
       "departureDate": "2026-07-01",
       "returnDate": "2026-07-05",
-      "status": "Approved"
+      "status": "Approved",
+      "company": "SkyCorp Travel"
+    },
+    {
+      "employee": "Tej",
+      "destination": "Japan",
+      "purpose": "for wife",
+      "budget": "100000",
+      "departureDate": "2026-06-10",
+      "returnDate": "2026-07-12",
+      "status": "Approved",
+      "company": "Google",
+      "id": "p-yM8DiiIrc"
+    },
+    {
+      "employee": "Tej Pratap",
+      "destination": "Japan",
+      "purpose": "For Project",
+      "budget": "10000",
+      "departureDate": "2027-01-10",
+      "returnDate": "2027-01-12",
+      "status": "Pending",
+      "company": "Luffy",
+      "id": "h6SJwgVj1fc"
     }
   ],
   "notifications": [
@@ -299,6 +275,11 @@
       "message": "Emma Watson's trip to Singapore was approved",
       "date": "2/6/2026",
       "id": "020PdSfN18A"
+    },
+    {
+      "message": "Tej's trip to Japan was approved",
+      "date": "6/6/2026",
+      "id": "DKxlJHFjW9k"
     }
   ],
   "reports": [
@@ -350,6 +331,24 @@
       "name": "Luffy Technologies",
       "location": "London",
       "employees": 75
+    },
+    {
+      "id": "Amw6N_gITPU",
+      "name": "SK",
+      "location": "LONDON",
+      "employees": "12"
+    },
+    {
+      "id": "2sP09KHz2oQ",
+      "name": "Google",
+      "location": "Not Set",
+      "employees": 0
+    },
+    {
+      "id": "GB9S_JJ5t24",
+      "name": "Luffy",
+      "location": "Not Set",
+      "employees": 0
     }
   ],
   "bookings": [
