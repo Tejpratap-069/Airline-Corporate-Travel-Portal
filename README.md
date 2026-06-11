@@ -1,102 +1,76 @@
-# ✈️ SkyCorp Travel - Corporate Travel Management System
+# ✈ SkyCorp Travel - Corporate Travel Management System
 
 ## 📌 Project Overview
 
-SkyCorp Travel is a role-based Corporate Travel Management System developed using React, Vite, Tailwind CSS, Axios, and JSON Server. The platform helps organizations manage employee travel requests, approvals, expenses, bookings, reports, and notifications through a centralized dashboard.
+SkyCorp Travel is a Corporate Travel Management System developed to streamline business travel operations within organizations. The platform enables employees, managers, and administrators to efficiently manage travel requests, approvals, bookings, expense claims, notifications, and reporting through a centralized dashboard.
 
-The system supports multiple user roles including Admin, Manager, and Employee, each with different permissions and features.
+The system provides role-based access control and simplifies corporate travel planning while improving transparency and operational efficiency.
 
 ---
 
 ## 🚀 Features
 
-### 🔐 Authentication & Authorization
+### 👨‍💼 Employee Features
 
-* User Registration
-* User Login
-* Role-Based Access Control
-* Protected Routes
-* Session Persistence using Local Storage
-
-### 👨‍💼 Employee Management
-
-* View Employees
-* Add Employees
-* Employee Profiles
-* Department Assignment
-
-### 🏢 Company & Department Management
-
-* Manage Companies
-* Manage Departments
-* Employee Distribution Tracking
-
-### ✈️ Travel Management
-
-* Create Trip Requests
-* View Travel Requests
+* User Registration & Login
+* Create Travel Requests
+* View My Trips
 * Travel History
-* Travel Calendar
-* Booking Management
-
-### 💰 Expense Management
-
 * Submit Expense Claims
-* Track Expenses
-* Expense Overview
-
-### ✅ Approval Workflow
-
-* Approve or Reject Travel Requests
-* Manager Approval Dashboard
-
-### 📊 Reports & Analytics
-
-* Travel Reports
-* Expense Reports
-* Company Insights
-
-### 🔔 Notifications
-
-* User Notifications
-* Travel Updates
-* Approval Alerts
-
-### 👤 User Features
-
+* Notifications
 * Profile Management
-* Settings Page
 * Support Center
-* My Trips
-* Travel History
+* Settings
 
-### 🛠️ Admin Features
+### 👨‍💻 Manager Features
 
-* Admin Dashboard
-* User Management
-* System Configuration
+* Dashboard Overview
+* Employee Management
+* Company Management
+* Review Travel Requests
+* Manage Bookings
+* Travel Calendar
+* Expense Monitoring
+* Reports & Analytics
+* Notifications
+
+### 🔐 Admin Features
+
+* Complete System Access
+* Employee Management
+* Department Management
+* Company Management
+* Travel Approval Control
+* Booking Management
+* Expense Claim Monitoring
+* Reports & Analytics
+* User Administration
 
 ---
 
-## 🖥️ Tech Stack
+## 🛠️ Technologies Used
 
 ### Frontend
 
 * React.js
-* Vite
-* Tailwind CSS
 * React Router DOM
+* Tailwind CSS
 * React Icons
+* Lucide React
 * React Hot Toast
-* Axios
 
-### Backend (Mock API)
+### Backend
 
 * JSON Server
+* REST API
+
+### Database
+
+* db.json
 
 ### Development Tools
 
-* VS Code
+* Visual Studio Code
 * Git
 * GitHub
 
@@ -104,19 +78,93 @@ The system supports multiple user roles including Admin, Manager, and Employee, 
 
 ## 📂 Project Structure
 
-```text
+```bash
 src/
-├── api/
-├── assets/
+│
 ├── components/
-├── context/
 ├── layouts/
 ├── pages/
+│   ├── Dashboard.jsx
+│   ├── Employees.jsx
+│   ├── Companies.jsx
+│   ├── TripRequests.jsx
+│   ├── Bookings.jsx
+│   ├── TravelCalendar.jsx
+│   ├── ExpenseClaims.jsx
+│   ├── Reports.jsx
+│   ├── Notifications.jsx
+│   ├── MyTrips.jsx
+│   ├── TravelHistory.jsx
+│   ├── Profile.jsx
+│   ├── Settings.jsx
+│   └── Support.jsx
+│
 ├── routes/
-├── styles/
-├── App.jsx
-└── main.jsx
+├── api/
+└── App.jsx
 ```
+
+---
+
+## 📊 Modules Implemented
+
+### Employee Management
+
+* Add Employees
+* Manage Employee Records
+* Department Allocation
+
+### Travel Request Management
+
+* Create Travel Requests
+* Purpose Selection
+* Budget Management
+* Travel Dates Validation
+
+### Approval Workflow
+
+* Approve Requests
+* Reject Requests
+* Status Tracking
+
+### Booking Management
+
+* Flight Booking Records
+* Booking Status Tracking
+
+### Expense Claims
+
+* Travel Expense Submission
+* Expense Categories
+* Approval Tracking
+
+### Reports & Analytics
+
+* Employee Statistics
+* Trip Analytics
+* Expense Analysis
+* Budget Monitoring
+
+### Notifications
+
+* System Notifications
+* Activity Updates
+
+---
+
+## 🔒 Role-Based Access
+
+### Admin
+
+* Full System Access
+
+### Manager
+
+* Company-Level Management Access
+
+### Employee
+
+* Personal Travel Management Access
 
 ---
 
@@ -128,16 +176,16 @@ src/
 git clone https://github.com/Tejpratap-069/airline-corporate-travel-portal.git
 ```
 
-### Navigate to Project
-
-```bash
-cd airline-corporate-travel-portal
-```
-
 ### Install Dependencies
 
 ```bash
 npm install
+```
+
+### Start JSON Server
+
+```bash
+npx json-server --watch db.json --port 5000
 ```
 
 ### Start React Application
@@ -146,61 +194,49 @@ npm install
 npm run dev
 ```
 
-### Start JSON Server
+---
 
-```bash
-npx json-server --watch db.json --port 3001
+## 🔑 Admin Login
+
+```text
+Email: tejpratap@skycorp.com
+Password: admin123
 ```
 
 ---
 
-## 👥 User Roles
+## 📈 Future Enhancements
 
-### Admin
-
-* Manage Employees
-* Manage Departments
-* Manage Companies
-* View Reports
-* Access Admin Panel
-* Approve Requests
-
-### Manager
-
-* View Team Information
-* Approve Travel Requests
-* Access Reports
-
-### Employee
-
-* Create Travel Requests
-* Submit Expenses
-* View Travel History
-* Manage Profile
+* Flight API Integration
+* Hotel Booking Integration
+* PDF Report Generation
+* Email Notifications
+* Expense Receipt Upload
+* Interactive Dashboard Charts
+* Real-Time Approval System
 
 ---
 
-## 🎯 Future Enhancements
+## 🎓 Academic Information
 
-* Dashboard Analytics Charts
-* PDF Report Export
-* Excel Export
-* Email Notifications
-* Dark Mode
-* Real Backend Integration
-* JWT Authentication
-* Cloud Database Integration
+Project Title:
+Corporate Travel Management System (SkyCorp Travel)
+
+Developed As:
+Mini Project / Academic Project
+
+Department:
+Computer Science Engineering
 
 ---
 
 ## 👨‍💻 Developer
 
-**Tej Pratap Singh**
+Tej Pratap Singh
 
-GitHub: https://github.com/Tejpratap-069
+GitHub:
+https://github.com/Tejpratap-069
 
 ---
 
-## 📄 License
-
-This project is developed for educational and academic purposes.
+© 2026 SkyCorp Travel. All Rights Reserved.
