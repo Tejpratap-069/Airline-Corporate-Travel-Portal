@@ -9,14 +9,14 @@ const TripRequests = () => {
 );
 
   const [form, setForm] = useState({
-    employee: "",
-    destination: "",
-    purpose: "",
-    budget: "",
-    departureDate: "",
-    returnDate: "",
-    status: "Pending",
-  });
+  destination: "",
+  purpose: "",
+  customPurpose: "",
+  budget: "",
+  departureDate: "",
+  returnDate: "",
+  status: "Pending",
+});
 
   useEffect(() => {
     fetchTrips();
@@ -47,7 +47,6 @@ const TripRequests = () => {
 
   const addTrip = async () => {
     if (
-      !form.employee ||
       !form.destination ||
       !form.purpose ||
       !form.budget ||
@@ -57,17 +56,37 @@ const TripRequests = () => {
       toast.error("Fill all fields");
       return;
     }
+  const today = new Date();
+today.setHours(0, 0, 0, 0);
 
+const departure = new Date(form.departureDate);
+const returnDate = new Date(form.returnDate);
+
+if (departure < today) {
+  toast.error("Past dates are not allowed");
+  return;
+}
+
+if (returnDate < departure) {
+  toast.error(
+    "Return date cannot be before departure date"
+  );
+  return;
+}
     try {
-      await api.post("/trips", {
+    await api.post("/trips", {
   ...form,
+  purpose:
+    form.purpose === "Other"
+      ? form.customPurpose
+      : form.purpose,
+  employee: user.name,
   company: user.company,
 });
 
       toast.success("Trip Request Created");
 
       setForm({
-        employee: "",
         destination: "",
         purpose: "",
         budget: "",
@@ -165,17 +184,6 @@ const TripRequests = () => {
 
         <div className="grid md:grid-cols-3 gap-4">
 
-          <input
-            placeholder="Employee Name"
-            className="border p-3 rounded-xl"
-            value={form.employee}
-            onChange={(e) =>
-              setForm({
-                ...form,
-                employee: e.target.value,
-              })
-            }
-          />
 
           <input
             placeholder="Destination"
@@ -189,17 +197,71 @@ const TripRequests = () => {
             }
           />
 
-          <input
-            placeholder="Purpose"
-            className="border p-3 rounded-xl"
-            value={form.purpose}
-            onChange={(e) =>
-              setForm({
-                ...form,
-                purpose: e.target.value,
-              })
-            }
-          />
+         <select
+  className="border p-3 rounded-xl"
+  value={form.purpose}
+  onChange={(e) =>
+    setForm({
+      ...form,
+      purpose: e.target.value,
+    })
+  }
+>
+  <option value="">
+    Select Purpose
+  </option>
+
+  <option value="Client Meeting">
+    Client Meeting
+  </option>
+
+  <option value="Business Conference">
+    Business Conference
+  </option>
+
+  <option value="Project Discussion">
+    Project Discussion
+  </option>
+
+  <option value="Training Program">
+    Training Program
+  </option>
+
+  <option value="Branch Visit">
+    Branch Visit
+  </option>
+
+  <option value="Vendor Meeting">
+    Vendor Meeting
+  </option>
+
+  <option value="Audit & Compliance">
+    Audit & Compliance
+  </option>
+
+  <option value="Recruitment Drive">
+    Recruitment Drive
+  </option>
+
+  <option value="Other">
+    Other
+  </option>
+</select>
+        
+        {form.purpose === "Other" && (
+  <input
+    placeholder="Enter Purpose"
+    className="border p-3 rounded-xl"
+    value={form.customPurpose || ""}
+    onChange={(e) =>
+      setForm({
+        ...form,
+        customPurpose: e.target.value,
+      })
+    }
+  />
+)}
+
 
           <input
             type="number"
@@ -216,6 +278,7 @@ const TripRequests = () => {
 
           <input
             type="date"
+            min={new Date().toISOString().split("T")[0]}
             className="border p-3 rounded-xl"
             value={form.departureDate}
             onChange={(e) =>
@@ -229,6 +292,7 @@ const TripRequests = () => {
 
           <input
             type="date"
+            min={new Date().toISOString().split("T")[0]}
             className="border p-3 rounded-xl"
             value={form.returnDate}
             onChange={(e) =>

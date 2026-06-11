@@ -342,25 +342,63 @@ const Home = () => {
 
           <div>
 
-            <h3 className="text-3xl font-bold">
-              SkyCorp Travel
-            </h3>
+  <div className="bg-white p-8 rounded-3xl shadow">
 
-            <p className="mt-4">
-              support@skycorp.com
-            </p>
+    <h3 className="text-4xl font-bold text-blue-700">
+      SkyCorp Travel Support
+    </h3>
 
-            <p>
-              +1 800 555 1000
-            </p>
+    <p className="mt-5 text-lg">
+      📧 support@skycorp.com
+    </p>
 
-            <p>
-              New York, USA
-            </p>
+    <p className="text-lg">
+      📞 +91 98765 43210
+    </p>
 
-          </div>
+    <p className="text-lg">
+      📍 Hyderabad, Telangana, India
+    </p>
+
+    <p className="mt-5 text-gray-600">
+      Contact our support team for trip requests,
+      approvals, bookings, expense claims and
+      travel assistance.
+    </p>
+
+  </div>
+
+  <div className="grid grid-cols-1 gap-4 mt-6">
+
+    <div className="bg-white p-5 rounded-2xl shadow">
+      <h4 className="font-bold text-blue-600">
+        Customer Support
+      </h4>
+      <p>+91 98765 43210</p>
+    </div>
+
+    <div className="bg-white p-5 rounded-2xl shadow">
+      <h4 className="font-bold text-green-600">
+        Email Support
+      </h4>
+      <p>support@skycorp.com</p>
+    </div>
+
+    <div className="bg-white p-5 rounded-2xl shadow">
+      <h4 className="font-bold text-purple-600">
+        Office Location
+      </h4>
+      <p>Hyderabad, India</p>
+    </div>
+
+  </div>
+
+</div>
 
           <div className="bg-white rounded-3xl shadow p-8">
+            <h3 className="text-3xl font-bold mb-6">
+  Send Us A Message
+</h3>
 
             <input
               type="text"
@@ -380,7 +418,7 @@ const Home = () => {
               className="w-full border p-4 rounded-xl mb-4"
             />
 
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-xl">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold w-full">
               Send Message
             </button>
 

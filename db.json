@@ -1,18 +1,18 @@
 {
   "users": [
     {
-  "id": "ADMIN001",
-  "name": "Tej Pratap Singh",
-  "email": "tejpratap@skycorp.com",
-  "phone": "9999999999",
-  "company": "SkyCorp",
-  "department": "Administration",
-  "designation": "System Administrator",
-  "employeeId": "ADM001",
-  "role": "Admin",
-  "password": "admin123",
-  "profileImage": ""
-},
+      "id": "ADMIN001",
+      "name": "Tej Pratap Singh",
+      "email": "tejpratap@skycorp.com",
+      "phone": "9999999999",
+      "company": "SkyCorp",
+      "department": "Administration",
+      "designation": "System Administrator",
+      "employeeId": "ADM001",
+      "role": "Admin",
+      "password": "admin123",
+      "profileImage": ""
+    },
     {
       "name": "Tej pratap Singh",
       "email": "stejpratap163@gmail.com",
@@ -177,6 +177,28 @@
       "role": "Manager",
       "password": "123",
       "id": "w3OKy4d7D1Y"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap111@gmail.com",
+      "phone": "07416173379",
+      "company": "Luffy",
+      "department": "It",
+      "designation": "head",
+      "role": "Employee",
+      "password": "1234",
+      "id": "p-lEqRNlN_Y"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap1637@gmail.com",
+      "phone": "06302064641",
+      "company": "Luffy",
+      "department": "HR",
+      "designation": "uo",
+      "role": "Manager",
+      "password": "123",
+      "id": "28y583CwiN4"
     }
   ],
   "employees": [
@@ -255,9 +277,65 @@
       "budget": "10000",
       "departureDate": "2027-01-10",
       "returnDate": "2027-01-12",
-      "status": "Pending",
+      "status": "Approved",
       "company": "Luffy",
       "id": "h6SJwgVj1fc"
+    },
+    {
+      "employee": "Tej",
+      "destination": "thailand",
+      "purpose": "Gents Massage ",
+      "budget": "10000",
+      "departureDate": "2026-06-09",
+      "returnDate": "2026-06-15",
+      "status": "Approved",
+      "company": "Luffy",
+      "id": "WjOJG9iJPZs"
+    },
+    {
+      "employee": "Tej ",
+      "destination": "japan",
+      "purpose": "time ",
+      "budget": "1000",
+      "departureDate": "2020-11-11",
+      "returnDate": "2020-11-11",
+      "status": "Approved",
+      "company": "Luffy",
+      "id": "m9YJck8LU7M"
+    },
+    {
+      "destination": "japan",
+      "purpose": "time pass",
+      "budget": "1000",
+      "departureDate": "2026-10-10",
+      "returnDate": "2026-10-12",
+      "status": "Approved",
+      "employee": "Tej pratap Singh",
+      "company": "Luffy",
+      "id": "bqfGbtNDkJc"
+    },
+    {
+      "destination": "Germany",
+      "purpose": "time pass",
+      "budget": "10000",
+      "departureDate": "2020-10-10",
+      "returnDate": "1000-10-10",
+      "status": "Approved",
+      "employee": "Tej pratap Singh",
+      "company": "Luffy",
+      "id": "lwitrdJMjIw"
+    },
+    {
+      "destination": "India",
+      "purpose": "Branch Visit",
+      "customPurpose": "",
+      "budget": "1000",
+      "departureDate": "2026-10-22",
+      "returnDate": "2026-10-22",
+      "status": "Approved",
+      "employee": "Tej pratap Singh",
+      "company": "Luffy",
+      "id": "AdV6gOutIEc"
     }
   ],
   "notifications": [
@@ -280,6 +358,36 @@
       "message": "Tej's trip to Japan was approved",
       "date": "6/6/2026",
       "id": "DKxlJHFjW9k"
+    },
+    {
+      "message": "Tej Pratap's trip to Japan was approved",
+      "date": "11/6/2026",
+      "id": "6ySYvUy5haE"
+    },
+    {
+      "message": "Tej's trip to thailand was approved",
+      "date": "11/6/2026",
+      "id": "bjprOjCaalY"
+    },
+    {
+      "message": "Tej 's trip to japan was approved",
+      "date": "11/6/2026",
+      "id": "cprag5sn9qs"
+    },
+    {
+      "message": "Tej pratap Singh's trip to japan was approved",
+      "date": "11/6/2026",
+      "id": "8JczcYRfmJU"
+    },
+    {
+      "message": "Tej pratap Singh's trip to Germany was approved",
+      "date": "11/6/2026",
+      "id": "mPUj0AA8u4U"
+    },
+    {
+      "message": "Tej pratap Singh's trip to India was approved",
+      "date": "11/6/2026",
+      "id": "8FGoqKTWQbE"
     }
   ],
   "reports": [
@@ -341,14 +449,14 @@
     {
       "id": "2sP09KHz2oQ",
       "name": "Google",
-      "location": "Not Set",
-      "employees": 0
+      "location": "California",
+      "employees": 5
     },
     {
       "id": "GB9S_JJ5t24",
       "name": "Luffy",
-      "location": "Not Set",
-      "employees": 0
+      "location": "Thailand",
+      "employees": 10
     }
   ],
   "bookings": [
@@ -393,6 +501,13 @@
       "employee": "John Smith",
       "amount": 5000,
       "status": "Approved"
+    },
+    {
+      "id": "IYZ9zwhB6rI",
+      "amount": "5000",
+      "status": "Pending",
+      "employee": "Tej pratap Singh",
+      "company": "Luffy"
     }
   ],
   "analytics": [

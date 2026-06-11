@@ -16,9 +16,10 @@ const MyTrips = () => {
     const res = await api.get("/trips");
 
     const userTrips = res.data.filter(
-      (trip) =>
-        trip.employee === user?.name
-    );
+  (trip) =>
+    trip.employee?.toLowerCase().trim() ===
+    user?.name?.toLowerCase().trim()
+);
 
     setTrips(userTrips);
   };

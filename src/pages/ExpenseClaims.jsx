@@ -9,10 +9,12 @@ const ExpenseClaims = () => {
 );
 
   const [form, setForm] = useState({
-    employee: "",
-    amount: "",
-    status: "Pending",
-  });
+  expenseType: "",
+  description: "",
+  amount: "",
+  date: "",
+  status: "Pending",
+});
 
   useEffect(() => {
     loadExpenses();
@@ -42,22 +44,27 @@ const ExpenseClaims = () => {
 };  
 
   const addExpense = async () => {
-    if (!form.employee || !form.amount) {
+   if (
+  !form.expenseType ||
+  !form.amount ||
+  !form.date ||
+  !form.description
+) {
       toast.error("Fill all fields");
       return;
     }
 
     try {
-      await api.post("/expenses", {
+     await api.post("/expenses", {
   id: Date.now().toString(),
   ...form,
+  employee: user.name,
   company: user.company,
 });
 
       toast.success("Expense Added");
 
       setForm({
-        employee: "",
         amount: "",
         status: "Pending",
       });
@@ -139,57 +146,67 @@ const ExpenseClaims = () => {
           Add Expense Claim
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-2 gap-4">
 
-          <input
-            placeholder="Employee Name"
-            className="border p-3 rounded-xl"
-            value={form.employee}
-            onChange={(e) =>
-              setForm({
-                ...form,
-                employee:
-                  e.target.value,
-              })
-            }
-          />
+  <select
+    className="border p-3 rounded-xl"
+    value={form.expenseType}
+    onChange={(e) =>
+      setForm({
+        ...form,
+        expenseType: e.target.value,
+      })
+    }
+  >
+    <option value="">
+      Select Expense Type
+    </option>
 
-          <input
-            placeholder="Amount"
-            className="border p-3 rounded-xl"
-            value={form.amount}
-            onChange={(e) =>
-              setForm({
-                ...form,
-                amount:
-                  e.target.value,
-              })
-            }
-          />
+    <option>Flight</option>
+    <option>Hotel</option>
+    <option>Food</option>
+    <option>Taxi</option>
+    <option>Other</option>
+  </select>
 
-          <select
-            className="border p-3 rounded-xl"
-            value={form.status}
-            onChange={(e) =>
-              setForm({
-                ...form,
-                status:
-                  e.target.value,
-              })
-            }
-          >
-            <option>
-              Pending
-            </option>
-            <option>
-              Approved
-            </option>
-            <option>
-              Rejected
-            </option>
-          </select>
+  <input
+    type="number"
+    placeholder="Amount"
+    className="border p-3 rounded-xl"
+    value={form.amount}
+    onChange={(e) =>
+      setForm({
+        ...form,
+        amount: e.target.value,
+      })
+    }
+  />
 
-        </div>
+  <input
+    type="date"
+    className="border p-3 rounded-xl"
+    value={form.date}
+    onChange={(e) =>
+      setForm({
+        ...form,
+        date: e.target.value,
+      })
+    }
+  />
+
+  <input
+    placeholder="Description"
+    className="border p-3 rounded-xl"
+    value={form.description}
+    onChange={(e) =>
+      setForm({
+        ...form,
+        description: e.target.value,
+      })
+    }
+  />
+
+</div>
 
         <button
           onClick={addExpense}
