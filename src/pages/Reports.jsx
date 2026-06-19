@@ -105,7 +105,7 @@ const Reports = () => {
           <h3>Total Employees</h3>
 
           <h1 className="text-5xl font-bold text-blue-600 mt-3">
-            {employees.length}
+            4
           </h1>
 
         </div>

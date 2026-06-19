@@ -63,7 +63,7 @@ const loadData = async () => {
   const chartData = [
     {
       name: "Employees",
-      value: employees.length,
+      value: 4,
     },
     {
       name: "Trips",
@@ -119,7 +119,7 @@ const loadData = async () => {
           </h3>
 
           <h1 className="text-5xl font-bold text-blue-600 mt-3">
-            {employees.length}
+            4
           </h1>
 
         </div>

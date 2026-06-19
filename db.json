@@ -199,6 +199,28 @@
       "role": "Manager",
       "password": "123",
       "id": "28y583CwiN4"
+    },
+    {
+      "name": "Aryan",
+      "email": "aryan@gmail.com",
+      "phone": "07416173379",
+      "company": "SK",
+      "department": "Maeketing",
+      "designation": "worker",
+      "role": "Employee",
+      "password": "123",
+      "id": "M20wvMsOZeo"
+    },
+    {
+      "name": "Tej pratap Singh",
+      "email": "stejpratap11113@gmail.com",
+      "phone": "074161733791",
+      "company": "SK",
+      "department": "Tech",
+      "designation": "Team leader",
+      "role": "Employee",
+      "password": "123",
+      "id": "Kf_do3H6I70"
     }
   ],
   "employees": [
@@ -336,6 +358,64 @@
       "employee": "Tej pratap Singh",
       "company": "Luffy",
       "id": "AdV6gOutIEc"
+    },
+    {
+      "destination": "japan",
+      "purpose": "Client Meeting",
+      "customPurpose": "",
+      "budget": "10000",
+      "departureDate": "2026-07-19",
+      "returnDate": "2026-07-22",
+      "status": "Approved",
+      "employee": "R PRANAV",
+      "company": "SK",
+      "id": "Wq47t79v7jc"
+    },
+    {
+      "destination": "Germany",
+      "purpose": "Client Meeting",
+      "customPurpose": "",
+      "budget": "10000",
+      "departureDate": "2026-07-25",
+      "returnDate": "2026-07-28",
+      "status": "Approved",
+      "employee": "Aryan",
+      "company": "SK",
+      "id": "u0UAOXuwMnc"
+    },
+    {
+      "destination": "USA",
+      "purpose": "Project Discussion",
+      "budget": "10000",
+      "departureDate": "2026-09-12",
+      "returnDate": "2026-09-15",
+      "status": "Approved",
+      "employee": "Aryan",
+      "company": "SK",
+      "id": "4LgAngsBITU"
+    },
+    {
+      "destination": "Japan",
+      "purpose": "Training Program",
+      "customPurpose": "",
+      "budget": "20200",
+      "departureDate": "2026-08-12",
+      "returnDate": "2026-09-15",
+      "status": "Approved",
+      "employee": "Tej pratap Singh",
+      "company": "SK",
+      "id": "k5H4nGIwbMk"
+    },
+    {
+      "destination": "London",
+      "purpose": "Business Conference",
+      "budget": "75000",
+      "departureDate": "2026-09-12",
+      "returnDate": "2026-09-15",
+      "status": "Approved",
+      "employee": "Tej pratap Singh",
+      "company": "SK",
+      "id": "Ubf34uDFEtM"
     }
   ],
   "notifications": [
@@ -388,6 +468,31 @@
       "message": "Tej pratap Singh's trip to India was approved",
       "date": "11/6/2026",
       "id": "8FGoqKTWQbE"
+    },
+    {
+      "message": "R PRANAV's trip to japan was approved",
+      "date": "6/19/2026",
+      "id": "2lHn9MmOJQA"
+    },
+    {
+      "message": "Aryan's trip to Germany was approved",
+      "date": "6/19/2026",
+      "id": "Q-lvMgOZ5tE"
+    },
+    {
+      "message": "Aryan's trip to USA was approved",
+      "date": "6/19/2026",
+      "id": "_JOiYAvelcQ"
+    },
+    {
+      "message": "Tej pratap Singh's trip to Japan was approved",
+      "date": "6/19/2026",
+      "id": "Bo16xLevUnc"
+    },
+    {
+      "message": "Tej pratap Singh's trip to London was approved",
+      "date": "6/19/2026",
+      "id": "kmrLn_0MpnM"
     }
   ],
   "reports": [
