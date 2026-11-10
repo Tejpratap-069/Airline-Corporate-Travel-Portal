@@ -89,8 +89,9 @@ The system provides role-based access control and simplifies corporate travel pl
 
 ### Backend
 
-* JSON Server
+* Node.js + Express (in `backend/`)
 * REST API
+* JSON Server (legacy mock)
 
 ### Database
 
@@ -101,6 +102,20 @@ The system provides role-based access control and simplifies corporate travel pl
 * Visual Studio Code
 * Git
 * GitHub
+
+---
+
+## 🖥️ Backend
+
+A real **Node.js + Express** REST API lives in [`backend/`](backend/) and serves the frontend on **http://localhost:3001** — the same routes and port the app already uses, so the frontend works unchanged (the original json-server mock still works too, if you prefer it).
+
+```bash
+cd backend
+npm install
+npm start
+```
+
+It provides full CRUD (`GET` / `POST` / `PATCH` / `PUT` / `DELETE`) for `users`, `employees`, `trips`, `bookings`, `companies`, `departments`, `expenses`, `calendar`, `notifications`, `reports`, `analytics` and `settings`, with every change persisted to `backend/data/db.json`. See [backend/README.md](backend/README.md) for the full endpoint list.
 
 ---
 
