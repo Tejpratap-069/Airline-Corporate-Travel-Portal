@@ -8,6 +8,34 @@ The system provides role-based access control and simplifies corporate travel pl
 
 ---
 
+## 📸 Screenshots
+
+### Landing Page
+
+![SkyCorp Travel landing page](docs/screenshots/home.svg)
+
+### Login
+
+![Login page](docs/screenshots/login.svg)
+
+### Admin Dashboard
+
+![Admin dashboard](docs/screenshots/dashboard.svg)
+
+### Trip Requests
+
+![Trip Requests](docs/screenshots/trips.svg)
+
+### Flight Bookings
+
+![Flight Bookings](docs/screenshots/bookings.svg)
+
+### Reports & Analytics
+
+![Reports & Analytics](docs/screenshots/reports.svg)
+
+---
+
 ## 🚀 Features
 
 ### 👨‍💼 Employee Features
