@@ -82,21 +82,37 @@ const Sidebar = () => {
       : employeeMenu;
 
   return (
-    <div className="w-72 bg-slate-950 text-white min-h-screen overflow-y-auto">
+    <div className="w-64 shrink-0 bg-gradient-to-b from-navy-950 to-navy-900 text-white h-screen sticky top-0 overflow-y-auto flex flex-col">
 
-      <div className="p-6 border-b border-slate-700">
+      <div className="p-5 border-b border-white/10">
 
-        <h1 className="text-4xl font-bold">
-          ✈ SkyCorp
-        </h1>
+        <div className="flex items-center gap-3">
 
-        <p className="text-slate-400 text-lg">
-          {role}
-        </p>
+          <div className="w-11 h-11 rounded-xl bg-sky-500 flex items-center justify-center text-xl shadow-lg shadow-sky-500/30">
+            <FaPlane />
+          </div>
+
+          <div>
+
+            <h1 className="text-xl font-bold tracking-tight leading-tight">
+              SkyCorp
+            </h1>
+
+            <p className="text-slate-400 text-xs tracking-wide uppercase">
+              Travel Platform
+            </p>
+
+          </div>
+
+        </div>
+
+        <span className="inline-block mt-4 text-xs font-semibold bg-white/10 border border-white/10 rounded-full px-3 py-1 text-slate-200">
+          {role} Account
+        </span>
 
       </div>
 
-      <div className="p-4 space-y-2">
+      <nav className="p-3 space-y-1 flex-1">
 
         {menu.map((item) => (
 
@@ -104,15 +120,15 @@ const Sidebar = () => {
             key={item.path}
             to={item.path}
             className={({ isActive }) =>
-              `flex items-center gap-4 p-4 rounded-xl text-lg transition-all ${
+              `flex items-center gap-3 px-3 py-2.5 rounded-lg text-[15px] font-medium transition-all ${
                 isActive
-                  ? "bg-cyan-600 shadow-lg"
-                  : "hover:bg-slate-800"
+                  ? "bg-sky-600 text-white shadow-md shadow-sky-950/40"
+                  : "text-slate-300 hover:bg-white/10 hover:text-white"
               }`
             }
           >
 
-            <span className="text-xl">
+            <span className="text-lg opacity-90">
               {item.icon}
             </span>
 
@@ -124,6 +140,10 @@ const Sidebar = () => {
 
         ))}
 
+      </nav>
+
+      <div className="p-4 border-t border-white/10 text-xs text-slate-500">
+        SkyCorp Travel &bull; v2.0
       </div>
 
     </div>

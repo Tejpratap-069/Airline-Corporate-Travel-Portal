@@ -46,7 +46,7 @@ const Notifications = () => {
 
       {/* Header */}
 
-      <div className="bg-gradient-to-r from-purple-700 to-purple-500 text-white p-8 rounded-3xl shadow">
+      <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-sm">
 
         <h1 className="text-4xl font-bold">
           Notifications
@@ -62,7 +62,7 @@ const Notifications = () => {
 
       <div className="grid md:grid-cols-3 gap-6">
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3>Total Notifications</h3>
 
@@ -72,7 +72,7 @@ const Notifications = () => {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3>Recent Activities</h3>
 
@@ -82,7 +82,7 @@ const Notifications = () => {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3>System Alerts</h3>
 
@@ -96,7 +96,7 @@ const Notifications = () => {
 
       {/* Notification Feed */}
 
-      <div className="bg-white rounded-3xl shadow p-8">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
 
         <h2 className="text-2xl font-bold mb-6">
           Recent Notifications

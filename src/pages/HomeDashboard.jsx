@@ -92,7 +92,7 @@ const navigate = useNavigate();
 
       {/* Welcome */}
 
-      <div className="bg-gradient-to-r from-black to-cyan-700 text-white p-10 rounded-3xl shadow">
+      <div className="bg-slate-900 text-white p-10 rounded-2xl shadow-sm">
 
        <h1 className="text-5xl font-bold">
   Welcome Back, {user?.name}
@@ -112,7 +112,7 @@ const navigate = useNavigate();
 
       <div className="grid md:grid-cols-4 gap-6">
 
-        <div className="bg-white rounded-3xl p-6 shadow">
+        <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
 
           <FaUsers
             className="text-blue-600"
@@ -129,7 +129,7 @@ const navigate = useNavigate();
 
         </div>
 
-        <div className="bg-white rounded-3xl p-6 shadow">
+        <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
 
           <FaPlane
             className="text-green-600"
@@ -146,7 +146,7 @@ const navigate = useNavigate();
 
         </div>
 
-        <div className="bg-white rounded-3xl p-6 shadow">
+        <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
 
           <FaBuilding
             className="text-purple-600"
@@ -163,7 +163,7 @@ const navigate = useNavigate();
 
         </div>
 
-        <div className="bg-white rounded-3xl p-6 shadow">
+        <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
 
           <FaMoneyBillWave
             className="text-orange-600"
@@ -184,7 +184,7 @@ const navigate = useNavigate();
 
       {/* Quick Actions */}
 
-      <div className="bg-white p-8 rounded-3xl shadow">
+      <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
 
         <h2 className="text-3xl font-bold mb-6">
           Quick Actions
@@ -194,14 +194,14 @@ const navigate = useNavigate();
 
         <button
   onClick={() => navigate("/trips")}
-  className="bg-blue-600 text-white p-4 rounded-xl hover:bg-blue-700"
+  className="bg-sky-600 text-white p-4 rounded-xl hover:bg-sky-700"
 >
   New Trip Request
 </button>
 
 <button
   onClick={() => navigate("/employees")}
-  className="bg-green-600 text-white p-4 rounded-xl hover:bg-green-700"
+  className="bg-emerald-600 text-white p-4 rounded-xl hover:bg-emerald-700"
 >
   Add Employee
 </button>
@@ -226,7 +226,7 @@ const navigate = useNavigate();
 
       {/* Recent Trips */}
 
-      <div className="bg-white rounded-3xl shadow overflow-hidden">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
 
         <div className="p-6 border-b">
 
@@ -305,7 +305,7 @@ const navigate = useNavigate();
 
       {/* Notifications */}
 
-      <div className="bg-white p-8 rounded-3xl shadow">
+      <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
 
         <h2 className="text-3xl font-bold mb-5">
           Notifications
@@ -318,7 +318,7 @@ const navigate = useNavigate();
 
               <div
                 key={notification.id}
-                className="flex items-center gap-4 border p-4 rounded-xl"
+                className="flex items-center gap-4 border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
               >
 
                 <FaBell className="text-blue-600" />
@@ -348,7 +348,7 @@ const navigate = useNavigate();
 
       <div className="grid md:grid-cols-3 gap-6">
 
-        <div className="bg-white p-8 rounded-3xl shadow">
+        <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
 
           <FaCheckCircle
             size={40}
@@ -371,7 +371,7 @@ const navigate = useNavigate();
 
         </div>
 
-        <div className="bg-white p-8 rounded-3xl shadow">
+        <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
 
           <FaPlane
             size={40}
@@ -388,7 +388,7 @@ const navigate = useNavigate();
 
         </div>
 
-        <div className="bg-white p-8 rounded-3xl shadow">
+        <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
 
           <FaMoneyBillWave
             size={40}

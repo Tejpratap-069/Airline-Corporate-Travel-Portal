@@ -6,7 +6,7 @@ const Policies = () => {
         Travel Policies
       </h1>
 
-      <div className="bg-white p-6 rounded shadow">
+      <div className="bg-white p-6 rounded border border-slate-200 shadow-sm">
 
         <ul className="space-y-3">
 

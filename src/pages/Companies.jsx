@@ -84,7 +84,7 @@ const Companies = () => {
 
       {/* Header */}
 
-      <div className="bg-gradient-to-r from-green-700 to-green-500 text-white p-8 rounded-3xl shadow">
+      <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-sm">
 
         <h1 className="text-4xl font-bold">
           Companies Management
@@ -100,7 +100,7 @@ const Companies = () => {
 
       <div className="grid md:grid-cols-3 gap-6">
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3 className="text-gray-500">
             Total Companies
@@ -112,7 +112,7 @@ const Companies = () => {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3 className="text-gray-500">
             Active Locations
@@ -130,7 +130,7 @@ const Companies = () => {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3 className="text-gray-500">
             Total Employees
@@ -152,9 +152,58 @@ const Companies = () => {
       </div>
 
 
+      {/* Add Company Form */}
+
+      <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+
+        <h2 className="text-2xl font-bold mb-6">
+          Add Company
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-5">
+
+          <input
+            className="border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
+            placeholder="Company Name"
+            value={form.name}
+            onChange={(e) =>
+              setForm({ ...form, name: e.target.value })
+            }
+          />
+
+          <input
+            className="border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
+            placeholder="Location"
+            value={form.location}
+            onChange={(e) =>
+              setForm({ ...form, location: e.target.value })
+            }
+          />
+
+          <input
+            className="border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
+            placeholder="Employees"
+            type="number"
+            value={form.employees}
+            onChange={(e) =>
+              setForm({ ...form, employees: e.target.value })
+            }
+          />
+
+        </div>
+
+        <button
+          onClick={addCompany}
+          className="mt-6 bg-emerald-600 text-white px-8 py-3 rounded-xl"
+        >
+          Add Company
+        </button>
+
+      </div>
+
       {/* Companies Table */}
 
-      <div className="bg-white rounded-3xl shadow overflow-hidden">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
 
         <table className="w-full">
 

@@ -29,7 +29,7 @@ const TravelHistory = () => {
   return (
     <div className="space-y-8">
 
-      <div className="bg-gradient-to-r from-slate-950 via-slate-800 to-cyan-600 text-white p-8 rounded-3xl shadow">
+      <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-sm">
 
         <h1 className="text-4xl font-bold">
           Travel History
@@ -41,7 +41,7 @@ const TravelHistory = () => {
 
       </div>
 
-      <div className="bg-white rounded-3xl shadow overflow-hidden">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
 
         <table className="w-full">
 

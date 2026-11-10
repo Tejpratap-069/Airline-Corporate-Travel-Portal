@@ -78,7 +78,7 @@ const Employees = () => {
 
       {/* Header */}
 
-      <div className="bg-gradient-to-r from-blue-700 to-blue-500 text-white p-8 rounded-3xl shadow">
+      <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-sm">
 
         <h1 className="text-4xl font-bold">
           Employee Management
@@ -94,7 +94,7 @@ const Employees = () => {
 
       <div className="grid md:grid-cols-3 gap-6">
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3>Total Employees</h3>
 
@@ -104,7 +104,7 @@ const Employees = () => {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3>Departments</h3>
 
@@ -120,7 +120,7 @@ const Employees = () => {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3>Active Records</h3>
 
@@ -134,7 +134,7 @@ const Employees = () => {
 
       {/* Add Employee */}
 
-      <div className="bg-white rounded-3xl shadow p-8">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
 
         <h2 className="text-2xl font-bold mb-6">
           Add Employee
@@ -144,7 +144,7 @@ const Employees = () => {
 
           <input
             placeholder="Name"
-            className="border p-4 rounded-xl"
+            className="border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.name}
             onChange={(e) =>
               setForm({
@@ -156,7 +156,7 @@ const Employees = () => {
 
           <input
             placeholder="Email"
-            className="border p-4 rounded-xl"
+            className="border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.email}
             onChange={(e) =>
               setForm({
@@ -168,7 +168,7 @@ const Employees = () => {
 
           <input
             placeholder="Department"
-            className="border p-4 rounded-xl"
+            className="border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.department}
             onChange={(e) =>
               setForm({
@@ -183,7 +183,7 @@ const Employees = () => {
 
         <button
           onClick={addEmployee}
-          className="mt-6 bg-blue-600 text-white px-8 py-3 rounded-xl"
+          className="mt-6 bg-sky-600 text-white px-8 py-3 rounded-xl"
         >
           Add Employee
         </button>
@@ -192,12 +192,12 @@ const Employees = () => {
 
       {/* Search */}
 
-      <div className="bg-white p-6 rounded-3xl shadow">
+      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
         <input
           type="text"
           placeholder="Search Employee..."
-          className="w-full border p-4 rounded-xl"
+          className="w-full border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
           value={search}
           onChange={(e) =>
             setSearch(e.target.value)
@@ -214,10 +214,10 @@ const Employees = () => {
           (employee) => (
             <div
               key={employee.id}
-              className="bg-white rounded-3xl shadow p-6"
+              className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6"
             >
 
-              <div className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold">
+              <div className="w-16 h-16 rounded-full bg-sky-600 text-white flex items-center justify-center text-2xl font-bold">
 
                 {employee.name?.charAt(0)}
 

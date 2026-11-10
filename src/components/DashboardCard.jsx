@@ -5,7 +5,7 @@ const DashboardCard = ({
 }) => {
   return (
     <div
-      className={`${color} text-white p-6 rounded-xl shadow`}
+      className={`${color} text-white p-6 rounded-xl shadow-sm`}
     >
       <h2 className="text-lg">
         {title}

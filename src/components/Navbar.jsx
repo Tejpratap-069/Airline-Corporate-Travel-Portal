@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white shadow px-8 py-4 flex justify-between items-center">
+    <div className="bg-white border border-slate-200 shadow-sm px-8 py-4 flex justify-between items-center">
 
       <div>
 
@@ -54,7 +54,7 @@ const Navbar = () => {
 
         </div>
 
-        <div className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-lg">
+        <div className="w-12 h-12 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-lg">
 
           {user?.name?.charAt(0)}
 

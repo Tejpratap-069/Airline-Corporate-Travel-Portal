@@ -42,7 +42,7 @@ const Departments = () => {
   return (
     <div className="space-y-8">
 
-      <div className="bg-gradient-to-r from-blue-700 to-blue-500 p-8 rounded-3xl text-white">
+      <div className="bg-slate-900 p-8 rounded-2xl text-white">
         <h1 className="text-4xl font-bold">
           Departments Management
         </h1>
@@ -53,21 +53,21 @@ const Departments = () => {
 
       <div className="grid md:grid-cols-3 gap-5">
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <h3>Total Departments</h3>
           <h1 className="text-4xl font-bold">
             {departments.length}
           </h1>
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <h3>Department Heads</h3>
           <h1 className="text-4xl font-bold">
             {departments.length}
           </h1>
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <h3>Total Employees</h3>
           <h1 className="text-4xl font-bold">
             {departments.reduce(
@@ -83,7 +83,7 @@ const Departments = () => {
 
       </div>
 
-      <div className="bg-white p-8 rounded-3xl shadow">
+      <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
 
         <h2 className="text-2xl font-bold mb-5">
           Add Department
@@ -92,7 +92,7 @@ const Departments = () => {
         <div className="grid md:grid-cols-3 gap-4">
 
           <input
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             placeholder="Department Name"
             value={name}
             onChange={(e) =>
@@ -101,7 +101,7 @@ const Departments = () => {
           />
 
           <input
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             placeholder="Department Head"
             value={head}
             onChange={(e) =>
@@ -110,7 +110,7 @@ const Departments = () => {
           />
 
           <input
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             placeholder="Employee Count"
             value={employees}
             onChange={(e) =>
@@ -124,14 +124,14 @@ const Departments = () => {
 
         <button
           onClick={addDepartment}
-          className="mt-5 bg-blue-600 text-white px-8 py-3 rounded-xl"
+          className="mt-5 bg-sky-600 text-white px-8 py-3 rounded-xl"
         >
           Add Department
         </button>
 
       </div>
 
-      <div className="bg-white rounded-3xl shadow overflow-hidden">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
 
         <table className="w-full">
 

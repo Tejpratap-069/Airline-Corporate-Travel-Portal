@@ -118,7 +118,7 @@ if (returnDate < departure) {
 
       {/* Header */}
 
-      <div className="bg-gradient-to-r from-blue-700 to-blue-500 text-white p-8 rounded-3xl shadow">
+      <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-sm">
 
         <h1 className="text-4xl font-bold">
           Trip Requests
@@ -134,7 +134,7 @@ if (returnDate < departure) {
 
       <div className="grid md:grid-cols-3 gap-6">
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3>Total Trips</h3>
 
@@ -144,7 +144,7 @@ if (returnDate < departure) {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3>Approved</h3>
 
@@ -158,7 +158,7 @@ if (returnDate < departure) {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3>Pending</h3>
 
@@ -176,7 +176,7 @@ if (returnDate < departure) {
 
       {/* Create Trip */}
 
-      <div className="bg-white p-8 rounded-3xl shadow">
+      <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
 
         <h2 className="text-2xl font-bold mb-6">
           Create Trip Request
@@ -187,7 +187,7 @@ if (returnDate < departure) {
 
           <input
             placeholder="Destination"
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.destination}
             onChange={(e) =>
               setForm({
@@ -198,7 +198,7 @@ if (returnDate < departure) {
           />
 
          <select
-  className="border p-3 rounded-xl"
+  className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
   value={form.purpose}
   onChange={(e) =>
     setForm({
@@ -251,7 +251,7 @@ if (returnDate < departure) {
         {form.purpose === "Other" && (
   <input
     placeholder="Enter Purpose"
-    className="border p-3 rounded-xl"
+    className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
     value={form.customPurpose || ""}
     onChange={(e) =>
       setForm({
@@ -266,7 +266,7 @@ if (returnDate < departure) {
           <input
             type="number"
             placeholder="Budget"
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.budget}
             onChange={(e) =>
               setForm({
@@ -279,7 +279,7 @@ if (returnDate < departure) {
           <input
             type="date"
             min={new Date().toISOString().split("T")[0]}
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.departureDate}
             onChange={(e) =>
               setForm({
@@ -293,7 +293,7 @@ if (returnDate < departure) {
           <input
             type="date"
             min={new Date().toISOString().split("T")[0]}
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.returnDate}
             onChange={(e) =>
               setForm({
@@ -308,7 +308,7 @@ if (returnDate < departure) {
 
         <button
           onClick={addTrip}
-          className="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl"
+          className="mt-6 bg-sky-600 hover:bg-sky-700 text-white px-8 py-3 rounded-xl"
         >
           Create Request
         </button>
@@ -317,7 +317,7 @@ if (returnDate < departure) {
 
       {/* Trips Table */}
 
-      <div className="bg-white rounded-3xl shadow p-8">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
 
         <h2 className="text-2xl font-bold mb-6">
           All Trip Requests

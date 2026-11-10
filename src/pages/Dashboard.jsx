@@ -92,7 +92,7 @@ const loadData = async () => {
 
       {/* Welcome Card */}
 
-      <div className="bg-gradient-to-r from-blue-700 to-blue-500 text-white p-8 rounded-3xl shadow-xl">
+      <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-sm">
 
         <h1 className="text-4xl font-bold">
           Welcome Back, {user?.name}
@@ -112,7 +112,7 @@ const loadData = async () => {
 
       <div className="grid md:grid-cols-4 gap-6">
 
-        <div className="bg-white rounded-3xl shadow p-6">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
 
           <h3 className="text-gray-500">
             Employees
@@ -124,7 +124,7 @@ const loadData = async () => {
 
         </div>
 
-        <div className="bg-white rounded-3xl shadow p-6">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
 
           <h3 className="text-gray-500">
             Total Trips
@@ -136,7 +136,7 @@ const loadData = async () => {
 
         </div>
 
-        <div className="bg-white rounded-3xl shadow p-6">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
 
           <h3 className="text-gray-500">
             Approved
@@ -148,7 +148,7 @@ const loadData = async () => {
 
         </div>
 
-        <div className="bg-white rounded-3xl shadow p-6">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
 
           <h3 className="text-gray-500">
             Pending
@@ -166,7 +166,7 @@ const loadData = async () => {
 
       <div className="grid md:grid-cols-2 gap-8">
 
-        <div className="bg-white rounded-3xl shadow p-6">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
 
           <h2 className="text-2xl font-bold mb-4">
             Company Overview
@@ -190,7 +190,7 @@ const loadData = async () => {
 
         </div>
 
-        <div className="bg-white rounded-3xl shadow p-6">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
 
           <h2 className="text-2xl font-bold mb-4">
             Approval Status
@@ -231,7 +231,7 @@ const loadData = async () => {
 
       {/* Recent Activity */}
 
-      <div className="bg-white rounded-3xl shadow p-6">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
 
         <h2 className="text-2xl font-bold mb-5">
           Recent Trips

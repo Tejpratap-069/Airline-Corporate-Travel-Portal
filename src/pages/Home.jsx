@@ -13,11 +13,13 @@ const Home = () => {
 
       {/* Navbar */}
 
-      <nav className="bg-gradient-to-r from-slate-950 via-slate-800 to-cyan-600 text-white px-10 py-6 flex justify-between items-center">
+      <nav className="bg-slate-900 text-white px-10 py-5 flex justify-between items-center sticky top-0 z-30 shadow-md">
 
         <div className="flex items-center gap-3">
-          <Plane size={40} />
-          <h1 className="text-4xl font-bold">
+          <span className="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center">
+            <Plane size={20} />
+          </span>
+          <h1 className="text-2xl font-bold tracking-tight">
             SkyCorp Travel
           </h1>
         </div>
@@ -44,15 +46,15 @@ const Home = () => {
 
       {/* Hero */}
 
-      <section className="bg-gradient-to-r from-slate-950 via-slate-800 to-cyan-600 text-white py-28 text-center px-6">
+      <section className="bg-gradient-to-b from-slate-900 to-navy-900 text-white py-28 text-center px-6">
 
-        <h1 className="text-7xl font-extrabold">
+        <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight">
           Corporate Travel
           <br />
-          Management Platform
+          <span className="text-sky-400">Management Platform</span>
         </h1>
 
-        <p className="text-xl mt-8 max-w-4xl mx-auto">
+        <p className="text-xl mt-8 max-w-4xl mx-auto text-slate-300">
 
           Streamline business travel,
           automate approvals,
@@ -66,14 +68,14 @@ const Home = () => {
 
           <Link
             to="/signup"
-            className="bg-white text-blue-700 px-8 py-4 rounded-2xl font-bold text-lg"
+            className="bg-white text-sky-700 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-sky-50 transition"
           >
             Get Started
           </Link>
 
           <Link
             to="/login"
-            className="border border-white px-8 py-4 rounded-2xl text-lg"
+            className="border border-white/70 px-8 py-4 rounded-2xl text-lg hover:bg-white/10 transition"
           >
             Login
           </Link>
@@ -86,7 +88,7 @@ const Home = () => {
 
       <section className="grid md:grid-cols-4 gap-6 px-10 py-20 bg-slate-100">
 
-        <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 text-center">
 
           <h2 className="text-5xl font-bold text-blue-600">
             500+
@@ -98,7 +100,7 @@ const Home = () => {
 
         </div>
 
-        <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 text-center">
 
           <h2 className="text-5xl font-bold text-green-600">
             50K+
@@ -110,7 +112,7 @@ const Home = () => {
 
         </div>
 
-        <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 text-center">
 
           <h2 className="text-5xl font-bold text-purple-600">
             99%
@@ -122,7 +124,7 @@ const Home = () => {
 
         </div>
 
-        <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 text-center">
 
           <h2 className="text-5xl font-bold text-orange-500">
             24/7
@@ -146,7 +148,7 @@ const Home = () => {
 
         <div className="grid md:grid-cols-4 gap-8">
 
-          <div className="bg-slate-50 rounded-3xl shadow p-8">
+          <div className="bg-slate-50 rounded-2xl shadow-sm p-8">
 
             <Plane
               size={45}
@@ -163,7 +165,7 @@ const Home = () => {
 
           </div>
 
-          <div className="bg-slate-50 rounded-3xl shadow p-8">
+          <div className="bg-slate-50 rounded-2xl shadow-sm p-8">
 
             <CheckCircle
               size={45}
@@ -180,7 +182,7 @@ const Home = () => {
 
           </div>
 
-          <div className="bg-slate-50 rounded-3xl shadow p-8">
+          <div className="bg-slate-50 rounded-2xl shadow-sm p-8">
 
             <BarChart3
               size={45}
@@ -197,7 +199,7 @@ const Home = () => {
 
           </div>
 
-          <div className="bg-slate-50 rounded-3xl shadow p-8">
+          <div className="bg-slate-50 rounded-2xl shadow-sm p-8">
 
             <Users
               size={45}
@@ -228,7 +230,7 @@ const Home = () => {
 
         <div className="grid md:grid-cols-3 gap-10">
 
-          <div className="bg-white rounded-3xl p-8 shadow text-center">
+          <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center">
 
             <h3 className="text-4xl font-bold text-blue-600">
               1
@@ -244,7 +246,7 @@ const Home = () => {
 
           </div>
 
-          <div className="bg-white rounded-3xl p-8 shadow text-center">
+          <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center">
 
             <h3 className="text-4xl font-bold text-green-600">
               2
@@ -260,7 +262,7 @@ const Home = () => {
 
           </div>
 
-          <div className="bg-white rounded-3xl p-8 shadow text-center">
+          <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center">
 
             <h3 className="text-4xl font-bold text-purple-600">
               3
@@ -290,7 +292,7 @@ const Home = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
 
-          <div className="bg-slate-50 p-8 rounded-3xl shadow">
+          <div className="bg-slate-50 p-8 rounded-2xl shadow-sm">
 
             <p>
               "SkyCorp Travel transformed our travel operations."
@@ -302,7 +304,7 @@ const Home = () => {
 
           </div>
 
-          <div className="bg-slate-50 p-8 rounded-3xl shadow">
+          <div className="bg-slate-50 p-8 rounded-2xl shadow-sm">
 
             <p>
               "Amazing analytics and approval process."
@@ -314,7 +316,7 @@ const Home = () => {
 
           </div>
 
-          <div className="bg-slate-50 p-8 rounded-3xl shadow">
+          <div className="bg-slate-50 p-8 rounded-2xl shadow-sm">
 
             <p>
               "Best travel management platform."
@@ -342,7 +344,7 @@ const Home = () => {
 
           <div>
 
-  <div className="bg-white p-8 rounded-3xl shadow">
+  <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
 
     <h3 className="text-4xl font-bold text-blue-700">
       SkyCorp Travel Support
@@ -370,21 +372,21 @@ const Home = () => {
 
   <div className="grid grid-cols-1 gap-4 mt-6">
 
-    <div className="bg-white p-5 rounded-2xl shadow">
+    <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
       <h4 className="font-bold text-blue-600">
         Customer Support
       </h4>
       <p>+91 98765 43210</p>
     </div>
 
-    <div className="bg-white p-5 rounded-2xl shadow">
+    <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
       <h4 className="font-bold text-green-600">
         Email Support
       </h4>
       <p>support@skycorp.com</p>
     </div>
 
-    <div className="bg-white p-5 rounded-2xl shadow">
+    <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
       <h4 className="font-bold text-purple-600">
         Office Location
       </h4>
@@ -395,7 +397,7 @@ const Home = () => {
 
 </div>
 
-          <div className="bg-white rounded-3xl shadow p-8">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
             <h3 className="text-3xl font-bold mb-6">
   Send Us A Message
 </h3>
@@ -403,22 +405,22 @@ const Home = () => {
             <input
               type="text"
               placeholder="Name"
-              className="w-full border p-4 rounded-xl mb-4"
+              className="w-full border p-4 rounded-xl mb-4 focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             />
 
             <input
               type="email"
               placeholder="Email"
-              className="w-full border p-4 rounded-xl mb-4"
+              className="w-full border p-4 rounded-xl mb-4 focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             />
 
             <textarea
               rows="5"
               placeholder="Message"
-              className="w-full border p-4 rounded-xl mb-4"
+              className="w-full border p-4 rounded-xl mb-4 focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             />
 
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold w-full">
+            <button className="bg-sky-600 hover:bg-sky-700 text-white px-8 py-4 rounded-xl font-bold w-full">
               Send Message
             </button>
 

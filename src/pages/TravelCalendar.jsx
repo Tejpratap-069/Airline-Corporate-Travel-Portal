@@ -91,7 +91,7 @@ const TravelCalendar = () => {
 
       {/* Header */}
 
-      <div className="bg-gradient-to-r from-cyan-700 to-blue-500 text-white p-8 rounded-3xl shadow">
+      <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-sm">
 
         <h1 className="text-4xl font-bold">
           Travel Calendar
@@ -107,7 +107,7 @@ const TravelCalendar = () => {
 
       <div className="grid md:grid-cols-3 gap-6">
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3 className="text-gray-500">
             Upcoming Trips
@@ -119,7 +119,7 @@ const TravelCalendar = () => {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3 className="text-gray-500">
             Destinations
@@ -138,7 +138,7 @@ const TravelCalendar = () => {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3 className="text-gray-500">
             Travelers
@@ -161,7 +161,7 @@ const TravelCalendar = () => {
 
       {/* Add Trip */}
 
-      <div className="bg-white p-8 rounded-3xl shadow">
+      <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
 
         <h2 className="text-2xl font-bold mb-5">
           Schedule New Trip
@@ -171,7 +171,7 @@ const TravelCalendar = () => {
 
           <input
             placeholder="Employee Name"
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.employee}
             onChange={(e) =>
               setForm({
@@ -184,7 +184,7 @@ const TravelCalendar = () => {
 
           <input
             placeholder="Destination"
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.destination}
             onChange={(e) =>
               setForm({
@@ -197,7 +197,7 @@ const TravelCalendar = () => {
 
           <input
             type="date"
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.date}
             onChange={(e) =>
               setForm({
@@ -211,7 +211,7 @@ const TravelCalendar = () => {
 
         <button
           onClick={addTrip}
-          className="mt-5 bg-cyan-600 text-white px-8 py-3 rounded-xl"
+          className="mt-5 bg-sky-600 text-white px-8 py-3 rounded-xl"
         >
           Add Trip
         </button>
@@ -220,7 +220,7 @@ const TravelCalendar = () => {
 
       {/* Timeline */}
 
-      <div className="bg-white p-8 rounded-3xl shadow">
+      <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
 
         <h2 className="text-2xl font-bold mb-6">
           Upcoming Schedule

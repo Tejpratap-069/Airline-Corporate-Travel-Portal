@@ -91,7 +91,7 @@ const Bookings = () => {
 
       {/* Header */}
 
-      <div className="bg-gradient-to-r from-purple-700 to-purple-500 text-white p-8 rounded-3xl shadow">
+      <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-sm">
 
         <h1 className="text-4xl font-bold">
           Flight Bookings
@@ -107,7 +107,7 @@ const Bookings = () => {
 
       <div className="grid md:grid-cols-3 gap-6">
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3 className="text-gray-500">
             Total Bookings
@@ -119,7 +119,7 @@ const Bookings = () => {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3 className="text-gray-500">
             Confirmed
@@ -137,7 +137,7 @@ const Bookings = () => {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3 className="text-gray-500">
             Pending
@@ -159,7 +159,7 @@ const Bookings = () => {
 
       {/* Add Booking */}
 
-      <div className="bg-white p-8 rounded-3xl shadow">
+      <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
 
         <h2 className="text-2xl font-bold mb-5">
           New Booking
@@ -169,7 +169,7 @@ const Bookings = () => {
 
           <input
             placeholder="Employee Name"
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.employee}
             onChange={(e) =>
               setForm({
@@ -182,7 +182,7 @@ const Bookings = () => {
 
           <input
             placeholder="Airline"
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.airline}
             onChange={(e) =>
               setForm({
@@ -195,7 +195,7 @@ const Bookings = () => {
 
           <input
             placeholder="Destination"
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.destination}
             onChange={(e) =>
               setForm({
@@ -207,7 +207,7 @@ const Bookings = () => {
           />
 
           <select
-            className="border p-3 rounded-xl"
+            className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
             value={form.status}
             onChange={(e) =>
               setForm({
@@ -241,7 +241,7 @@ const Bookings = () => {
 
       {/* Table */}
 
-      <div className="bg-white rounded-3xl shadow overflow-hidden">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
 
         <table className="w-full">
 

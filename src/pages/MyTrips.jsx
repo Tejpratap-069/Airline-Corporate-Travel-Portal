@@ -27,7 +27,7 @@ const MyTrips = () => {
   return (
     <div className="space-y-8">
 
-      <div className="bg-gradient-to-r from-slate-950 via-slate-800 to-cyan-600 text-white p-8 rounded-3xl shadow">
+      <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-sm">
 
         <h1 className="text-4xl font-bold">
           My Trips
@@ -41,14 +41,14 @@ const MyTrips = () => {
 
       <div className="grid md:grid-cols-3 gap-5">
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <h3>Total Trips</h3>
           <h1 className="text-4xl font-bold">
             {trips.length}
           </h1>
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <h3>Approved</h3>
           <h1 className="text-4xl font-bold text-green-600">
             {
@@ -60,7 +60,7 @@ const MyTrips = () => {
           </h1>
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <h3>Pending</h3>
           <h1 className="text-4xl font-bold text-orange-500">
             {
@@ -74,7 +74,7 @@ const MyTrips = () => {
 
       </div>
 
-      <div className="bg-white rounded-3xl shadow overflow-hidden">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
 
         <table className="w-full">
 

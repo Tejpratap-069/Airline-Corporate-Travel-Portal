@@ -53,7 +53,7 @@ const Profile = () => {
 
       {/* Header */}
 
-      <div className="bg-gradient-to-r from-blue-700 to-blue-500 text-white p-8 rounded-3xl shadow">
+      <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-sm">
 
         <h1 className="text-4xl font-bold">
           My Profile
@@ -68,11 +68,11 @@ const Profile = () => {
 
       {/* Profile Card */}
 
-      <div className="bg-white rounded-3xl shadow p-10">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-10">
 
         <div className="flex flex-col items-center">
 
-          <div className="w-32 h-32 rounded-full bg-blue-600 text-white text-5xl font-bold flex items-center justify-center">
+          <div className="w-32 h-32 rounded-full bg-sky-600 text-white text-5xl font-bold flex items-center justify-center">
 
             {profile?.name?.charAt(0)}
 
@@ -94,7 +94,7 @@ const Profile = () => {
 
       {/* Details */}
 
-      <div className="bg-white rounded-3xl shadow p-8">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
 
         <h2 className="text-2xl font-bold mb-6">
           Personal Information
@@ -112,7 +112,7 @@ const Profile = () => {
                 name: e.target.value,
               })
             }
-            className="border p-4 rounded-xl"
+            className="border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
           />
 
           <input
@@ -125,7 +125,7 @@ const Profile = () => {
                 email: e.target.value,
               })
             }
-            className="border p-4 rounded-xl"
+            className="border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
           />
 
           <input
@@ -138,7 +138,7 @@ const Profile = () => {
                 phone: e.target.value,
               })
             }
-            className="border p-4 rounded-xl"
+            className="border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
           />
 
           <input
@@ -152,7 +152,7 @@ const Profile = () => {
                   e.target.value,
               })
             }
-            className="border p-4 rounded-xl"
+            className="border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
           />
 
           <input
@@ -168,7 +168,7 @@ const Profile = () => {
                   e.target.value,
               })
             }
-            className="border p-4 rounded-xl"
+            className="border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
           />
 
           <input
@@ -184,14 +184,14 @@ const Profile = () => {
                   e.target.value,
               })
             }
-            className="border p-4 rounded-xl"
+            className="border p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
           />
 
         </div>
 
         <button
           onClick={updateProfile}
-          className="mt-8 bg-blue-600 text-white px-8 py-3 rounded-xl hover:bg-blue-700"
+          className="mt-8 bg-sky-600 text-white px-8 py-3 rounded-xl hover:bg-sky-700"
         >
           Save Changes
         </button>

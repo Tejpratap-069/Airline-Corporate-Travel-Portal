@@ -66,7 +66,7 @@ const Approvals = () => {
 
       {/* Header */}
 
-      <div className="bg-gradient-to-r from-green-700 to-green-500 text-white p-8 rounded-3xl shadow">
+      <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-sm">
 
         <h1 className="text-4xl font-bold">
           Trip Approvals
@@ -82,7 +82,7 @@ const Approvals = () => {
 
       <div className="grid md:grid-cols-3 gap-6">
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3 className="text-gray-500">
             Pending Requests
@@ -94,7 +94,7 @@ const Approvals = () => {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3 className="text-gray-500">
             Ready To Review
@@ -106,7 +106,7 @@ const Approvals = () => {
 
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 
           <h3 className="text-gray-500">
             Approval Queue
@@ -122,7 +122,7 @@ const Approvals = () => {
 
       {/* Pending Trips */}
 
-      <div className="bg-white rounded-3xl shadow p-8">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
 
         <h2 className="text-2xl font-bold mb-6">
           Pending Requests
@@ -207,7 +207,7 @@ const Approvals = () => {
                         onClick={() =>
                           approveTrip(trip)
                         }
-                        className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg"
+                        className="bg-green-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg"
                       >
                         Approve
                       </button>

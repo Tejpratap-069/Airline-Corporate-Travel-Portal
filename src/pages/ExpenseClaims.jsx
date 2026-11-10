@@ -90,7 +90,7 @@ const ExpenseClaims = () => {
   return (
     <div className="space-y-8">
 
-      <div className="bg-gradient-to-r from-emerald-700 to-green-500 text-white p-8 rounded-3xl shadow">
+      <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-sm">
         <h1 className="text-4xl font-bold">
           Expense Claims
         </h1>
@@ -102,7 +102,7 @@ const ExpenseClaims = () => {
 
       <div className="grid md:grid-cols-3 gap-6">
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <h3>Total Claims</h3>
 
           <h1 className="text-4xl font-bold mt-2">
@@ -110,7 +110,7 @@ const ExpenseClaims = () => {
           </h1>
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <h3>Approved</h3>
 
           <h1 className="text-4xl font-bold mt-2 text-green-600">
@@ -124,7 +124,7 @@ const ExpenseClaims = () => {
           </h1>
         </div>
 
-        <div className="bg-white p-6 rounded-3xl shadow">
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <h3>Pending</h3>
 
           <h1 className="text-4xl font-bold mt-2 text-orange-500">
@@ -140,7 +140,7 @@ const ExpenseClaims = () => {
 
       </div>
 
-      <div className="bg-white p-8 rounded-3xl shadow">
+      <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
 
         <h2 className="text-2xl font-bold mb-5">
           Add Expense Claim
@@ -149,7 +149,7 @@ const ExpenseClaims = () => {
       <div className="grid md:grid-cols-2 gap-4">
 
   <select
-    className="border p-3 rounded-xl"
+    className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
     value={form.expenseType}
     onChange={(e) =>
       setForm({
@@ -172,7 +172,7 @@ const ExpenseClaims = () => {
   <input
     type="number"
     placeholder="Amount"
-    className="border p-3 rounded-xl"
+    className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
     value={form.amount}
     onChange={(e) =>
       setForm({
@@ -184,7 +184,7 @@ const ExpenseClaims = () => {
 
   <input
     type="date"
-    className="border p-3 rounded-xl"
+    className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
     value={form.date}
     onChange={(e) =>
       setForm({
@@ -196,7 +196,7 @@ const ExpenseClaims = () => {
 
   <input
     placeholder="Description"
-    className="border p-3 rounded-xl"
+    className="border p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500 transition"
     value={form.description}
     onChange={(e) =>
       setForm({
@@ -210,14 +210,14 @@ const ExpenseClaims = () => {
 
         <button
           onClick={addExpense}
-          className="mt-5 bg-green-600 text-white px-8 py-3 rounded-xl"
+          className="mt-5 bg-emerald-600 text-white px-8 py-3 rounded-xl"
         >
           Add Expense
         </button>
 
       </div>
 
-      <div className="bg-white rounded-3xl shadow overflow-hidden">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
 
         <table className="w-full">
 
@@ -226,6 +226,14 @@ const ExpenseClaims = () => {
             <tr>
               <th className="p-4 text-left">
                 Employee
+              </th>
+
+              <th className="p-4 text-left">
+                Type
+              </th>
+
+              <th className="p-4 text-left">
+                Description
               </th>
 
               <th className="p-4 text-left">
@@ -254,6 +262,14 @@ const ExpenseClaims = () => {
 
                   <td className="p-4">
                     {expense.employee}
+                  </td>
+
+                  <td className="p-4">
+                    {expense.expenseType}
+                  </td>
+
+                  <td className="p-4">
+                    {expense.description}
                   </td>
 
                   <td className="p-4">
